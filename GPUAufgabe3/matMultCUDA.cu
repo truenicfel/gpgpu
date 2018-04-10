@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
-#include <helper_functions.h>
+//#include <helper_functions.h>
 
 
 cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size);
@@ -99,10 +99,51 @@ int matMultCUDA() {
 
 	int matrixSize = 2;
 
+	float *d_A, *d_B, *d_C;
+	float *h_A, *h_B, *h_C;
+
 	// matrix a
 	// -----------------------------------------------------------------------------------------------------------------
 	float* a;
 	a = (float*)malloc(matrixSize * matrixSize * sizeof(float));
+
+	cudaError_t error = cudaMalloc((void **)&d_A, matrixSize * sizeof(float));
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+	error = cudaMemcpy(d_A, h_A, matrixSize * sizeof(float), cudaMemcpyHostToDevice);
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+	error = cudaMalloc((void **)&d_B, matrixSize * sizeof(float));
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+	error = cudaMemcpy(d_B, h_B, matrixSize * sizeof(float), cudaMemcpyHostToDevice);
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+	error = cudaMalloc((void **)&d_C, matrixSize * sizeof(float));
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+	error = cudaMemcpy(h_C, d_C, matrixSize * sizeof(float), cudaMemcpyDeviceToHost);
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+	error = cudaFree(d_A); cudaFree(d_B); cudaFree(d_C);
+	if (error != cudaSuccess) {
+		printf("%s in %s at line %d\n", cudaGetErrorString(error), __FILE__, __LINE__);
+		exit(EXIT_FAILURE);
+	}
+
+
 
 	if (a == NULL) {
 		printf("malloc failed for matrix a.");
@@ -169,17 +210,17 @@ int matMultCUDA() {
 
 int main()
 {
-	StopWatchInterface *t;
-	if (!sdkCreateTimer(&t)) {
-		printf("timercreate failed\n");
-		exit(-1);
-	}
+	//StopWatchInterface *t;
+	//if (!sdkCreateTimer(&t)) {
+	//	printf("timercreate failed\n");
+	//	exit(-1);
+	//}
 
-	sdkStartTimer(&t);
+	//sdkStartTimer(&t);
 	// zu vermessende Funktionalität
-	sdkStopTimer(&t);
+	//sdkStopTimer(&t);
 
-	printf("Zeitdauer: %f\n", sdkGetTimerValue(&t);
+	//printf("Zeitdauer: %f\n", sdkGetTimerValue(&t);
 
 	matMultHost();
 	matMultCUDA();
@@ -235,7 +276,7 @@ cudaError_t addWithCuda(int *c, const int *a, const int *b, unsigned int size)
 	}
 
 	// Launch a kernel on the GPU with one thread for each element.
-	addKernel << <1, size >> >(dev_c, dev_a, dev_b);
+	addKernel <<<1, size >>>(dev_c, dev_a, dev_b);
 
 	// Check for any errors launching the kernel
 	cudaStatus = cudaGetLastError();
