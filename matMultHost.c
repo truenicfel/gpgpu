@@ -2,23 +2,25 @@
 #include <stdlib.h>
 #include <time.h>
 
-void printMatrix(int* pointerToMatrix, int matrixSize);
-void printMatrixToFile(int* pointerToMatrix, int matrixSize);
+void printMatrix(float* pointerToMatrix, int matrixSize);
+//void printMatrixToFile(int* pointerToMatrix, int matrixSize);
 
 int main() {
     printf("Hello, World!\n");
 
-    int matrixSize = 1024;
+    int matrixSize = 2;
 
     // matrix a
     // -----------------------------------------------------------------------------------------------------------------
-    int* a;
-    a = (int*) malloc(matrixSize * matrixSize * sizeof(int));
+    float* a;
+    a = (float*) malloc(matrixSize * matrixSize * sizeof(float));
 
     if(a == NULL) {
-        printf("malloc failed for a.");
+        printf("malloc failed for matrix a.");
         exit(1);
     }
+
+    // fill matrix a with values of counter which get incremented with every loop
     int counter = 0;
     for (int rowNumber = 0; rowNumber < matrixSize; rowNumber++) {
         for (int index = 0; index < matrixSize; index++) {
@@ -26,82 +28,65 @@ int main() {
             counter++;
         }
     }
-
-    // print a
-    //printf("Matrix a:\r\n");
-    //printMatrix(a, matrixSize);
+    printMatrix(a,matrixSize);
 
     // matrix b
     // -----------------------------------------------------------------------------------------------------------------
-    int* b;
-    b = (int*) malloc(matrixSize * matrixSize * sizeof(int));
+    float* b;
+    b = (float*) malloc(matrixSize * matrixSize * sizeof(float));
 
     if(b == NULL) {
-        printf("malloc failed for b.");
+        printf("malloc failed for matrix b.");
         exit(1);
     }
+    
+    // fill matrix a with values of counter which get incremented with every loop
     for (int rowNumber = 0; rowNumber < matrixSize; rowNumber++) {
         for (int index = 0; index < matrixSize; index++) {
-            b[index * matrixSize + rowNumber] = counter;
+            b[rowNumber * matrixSize + index] = counter;
             counter--;
         }
     }
-
-    // print b
-    //printf("Matrix b:\r\n");
-    //printMatrix(b, matrixSize);
+    printMatrix(b,matrixSize);
 
     // multiply
     // -----------------------------------------------------------------------------------------------------------------
     // result matrix c
-    int* c;
-    c = (int*) malloc(matrixSize * matrixSize * sizeof(int));
+    float* c;
+    c = (float*) malloc(matrixSize * matrixSize * sizeof(float));
 
     if(c == NULL) {
-        printf("malloc failed for c.");
+        printf("malloc failed for matrix c.");
         exit(1);
     }
-
-    // start measuring time here
-    clock_t start = clock();
 
     // choose row/line
     for (int rowNumber = 0; rowNumber < matrixSize; rowNumber++) {
         // choose column
         for (int columnNumber = 0; columnNumber < matrixSize; columnNumber++) {
             // result for the chose element (given by row and column)
-            int result = 0;
+            float result = 0;
             // iterate over both chosen row/line and column
             for (int element = 0; element < matrixSize; element++) {
-                result += a[rowNumber * matrixSize + element] * b[columnNumber * matrixSize + element];
+                result += a[rowNumber * matrixSize + element] * b[element * matrixSize + columnNumber];
             }
             c[rowNumber * matrixSize + columnNumber] = result;
         }
     }
-
-    // end time measurement here
-    clock_t stop = clock();
-
-    double elapsed = (double)(stop - start)/ CLOCKS_PER_SEC;
-
-    printf("Time: %f", elapsed);
-
-    // print c
-    //printf("Matrix c:\r\n");
-    printMatrixToFile(c, matrixSize);
-
+    printMatrix(c, matrixSize);
     return 0;
 }
 
-void printMatrix(int* pointerToMatrix, int matrixSize) {
+
+void printMatrix(float* pointerToMatrix, int matrixSize) {
     for (int rowNumber = 0; rowNumber < matrixSize; rowNumber++) {
         for (int index = 0; index < matrixSize; index++) {
-            printf("%d  ", pointerToMatrix[rowNumber * matrixSize + index]);
+            printf("%f  ", pointerToMatrix[rowNumber * matrixSize + index]);
         }
         printf("\r\n");
     }
 }
-
+/*
 void printMatrixToFile(int* pointerToMatrix, int matrixSize) {
     FILE* f = fopen("c.txt", "w");
     if (f == NULL)
@@ -117,3 +102,4 @@ void printMatrixToFile(int* pointerToMatrix, int matrixSize) {
         fprintf(f, "\r\n");
     }
 }
+*/
