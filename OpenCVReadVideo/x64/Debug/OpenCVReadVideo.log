@@ -1,0 +1,5 @@
+﻿  OpenCVReadVideo.cpp
+h:\benutzer\dokumente\opencvreadvideo\opencvreadvideo\opencvreadvideo.cpp(4): warning C4627: '#include <iostream>': skipped when looking for precompiled header use
+  h:\benutzer\dokumente\opencvreadvideo\opencvreadvideo\opencvreadvideo.cpp(4): note: Add directive to 'stdafx.h' or rebuild precompiled header
+  OpenCVReadVideo.vcxproj -> H:\Benutzer\Dokumente\OpenCVReadVideo\x64\Debug\OpenCVReadVideo.exe
+  35 Datei(en) kopiert
