@@ -10,82 +10,106 @@
 using namespace cv;
 using namespace std;
 
-extern void addKernel(int *c, const int *a, const int *b);
+//Macro for checking cuda errors following a cuda launch or api call
+#define cudaCheckError() { cudaError_t error = cudaGetLastError(); if (error != cudaSuccess) { printf("Cuda failure %s:%d: '%s'\n",__FILE__,__LINE__,cudaGetErrorString(error)); exit(EXIT_FAILURE);}}
 
+extern void addKernel(char* outputMatrix, char* inputMatrix, int rows, int columns);
 
-void doCuda()
+// provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
+Mat modifyFrame(Mat frame)
 {
-	const int a[5] = { 1, 2, 3, 4, 5 };
-	const int b[5] = { 10, 20, 30, 40, 50 };
-	int c[5] = { 0 };
-	int *dev_a = 0;
-	int *dev_b = 0;
-	int *dev_c = 0;
+	
+	// this is fixed for now: 16 x 16 block size
+	int blockSize = 16;
+	dim3 blockDimension = dim3(blockSize, blockSize, 1);
+	dim3 gridDimension = dim3((frame.cols - 1) / blockSize + 1, (frame.rows - 1) / blockSize + 1, 1);
 
-	cudaMalloc((void**)&dev_c, 5 * sizeof(int));
-	cudaMalloc((void**)&dev_a, 5 * sizeof(int));
-	cudaMalloc((void**)&dev_b, 5 * sizeof(int));
+	// size of mat data
+	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
 
-	cudaMemcpy(dev_a, a, 5 * sizeof(int), cudaMemcpyHostToDevice);
-	cudaMemcpy(dev_b, b, 5 * sizeof(int), cudaMemcpyHostToDevice);
+	// device pointer
+	uchar* device_input = nullptr;
+	uchar* device_output = nullptr;
 
-	void* args1[] = { &dev_c, &dev_a, &dev_b };
-	cudaLaunchKernel<void>(&addKernel, dim3(1), dim3(5), args1);
+	// malloc for input
+	cudaMalloc((void**)&device_input, frameDataSize);
+	cudaCheckError();
+	//printf("%p", (void*)device_input);
+	// malloc for output
+	cudaMalloc((void**)&device_output, frameDataSize);
+	cudaCheckError();
 
+	// now copy the actual data to the device as input for the kernel
+	cudaMemcpy(device_input, frame.data, frameDataSize, cudaMemcpyHostToDevice);
+	cudaCheckError();
+
+	int rows = frame.rows;
+	int columns = frame.cols;
+
+	void* args1[] = { &device_output, &device_input, &rows, &columns };
+	cudaLaunchKernel<void>(&addKernel, gridDimension, blockDimension, args1);
+	cudaCheckError();
 	cudaDeviceSynchronize();
-	cudaMemcpy(c, dev_c, 5 * sizeof(int), cudaMemcpyDeviceToHost);
 
-	printf("%i  %i  %i  %i  %i", c[0], c[1], c[2], c[3], c[4]);
+	// clone input as result
+	Mat result = frame.clone();
 
-	cudaFree(dev_c);
-	cudaFree(dev_a);
-	cudaFree(dev_b);
+	// write modified data to result
+	cudaMemcpy(result.data, device_output, frameDataSize, cudaMemcpyDeviceToHost);
+	cudaCheckError();
+
+	cudaFree(device_input);
+	cudaFree(device_output);
+
+	return result;
 }
 
 int main(int, char**)
 {
-	doCuda();
 
-
-//	VideoCapture cap("Z:/Videos/robotica_1080.mp4"); // open the default camera
-	VideoCapture cap("H:\\Benutzer\\Dokumente\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
-//	VideoCapture cap("C:/Users/fischer/Downloads/Bennu4k169Letterbox_h264.avi"); // open the default camera
-//	VideoCapture cap("D:/Users/fischer/Videos/fireworks.mp4");
-//	VideoCapture cap("D:/Users/fischer/Videos/Bennu4k169Letterbox_h264.mp4");
-//	VideoCapture cap("D:/Users/fischer/Videos/Bennu4k169Letterbox_h264.avi");
+	VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
 
 	if (!cap.isOpened())  // check if we succeeded
 		return -1;
 
 	Mat edges;
 	namedWindow("edges", 1);
-	bool firstCall = true;
+
+	// stores a single frame (input to device)
+	Mat frame;
+	// stores a single frame (output from device)
+	Mat output;
+	// get a new frame from camera
+	cap >> frame; 
+	// print some video data...
+	cout << "frame: dims: " << frame.dims << ", size[0]: " << frame.size[0] << ", size[1]:" << frame.size[1] << ", step[0]: " << frame.step[0] << ", step[1]:" << frame.step[1];
+	cout << ", type: " << frame.type() << " (CV16U: " << CV_16UC1 << ", CV8UC3: " << CV_8UC3 << ")" << ", elemSize: " << frame.elemSize();
+	cout << ", rows: " << frame.rows << ", cols: " << frame.cols << ", size: " << frame.size << ", dataPtr: " << frame.data << endl;
+
 	for (;;)
 	{	
-		Mat frame;
-		Mat output;
-		cap >> frame; // get a new frame from camera
+		
 		if (frame.dims == 0) { // we're done
 			break;
 		}
 
-		if (firstCall)
-		{
-			cout << "frame: dims: " << frame.dims << ", size[0]: " << frame.size[0] << ", size[1]:" << frame.size[1] << ", step[0]: " << frame.step[0] << ", step[1]:" << frame.step[1];
-			cout << ", type: " << frame.type() << " (CV16U: " << CV_16UC1 << ", CV8UC3: " << CV_8UC3 << ")" << ", elemSize: " << frame.elemSize();
-			cout << ", rows: " << frame.rows << ", cols: " << frame.cols << ", size: " << frame.size << ", dataPtr: " << frame.data << endl;
-			firstCall = false;
-		}
+		
 
-		output = frame.clone();
+		output = modifyFrame(frame);
 
+		// ------------------------------------------------
 		//cvtColor(frame, edges, COLOR_BGR2GRAY);
 		//GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);
-//		Sobel(frame, edges, frame.depth(), 2, 2);
-//		Canny(edges, edges, 0, 30, 3);
-//		imshow("edges", edges);
-		imshow("edges", output);
+		//Sobel(frame, edges, frame.depth(), 2, 2);
+		//Canny(edges, edges, 0, 30, 3);
+		//imshow("edges", edges);
+		// ------------------------------------------------
+
+		// show the output from device
+		imshow("edges", frame);
 		if (waitKey(1) >= 0) break;
+
+		cap >> frame;
 	}
 	// the camera will be deinitialized automatically in VideoCapture destructor
 	getchar();
