@@ -15,6 +15,8 @@ using namespace std;
 
 extern void colorConvert(unsigned char* grayImage, unsigned char* colorImage, int rows, int columns);
 
+extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns);
+
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame)
 {
@@ -26,6 +28,7 @@ Mat modifyFrame(Mat frame)
 
 	// size of mat data
 	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
+	size_t grayFrameDataSize = frameDataSize / 3;
 
 	// device pointer
 	uchar* device_input = nullptr;
@@ -35,8 +38,8 @@ Mat modifyFrame(Mat frame)
 	cudaMalloc((void**)&device_input, frameDataSize);
 	cudaCheckError();
 	//printf("%p", (void*)device_input);
-	// malloc for output
-	cudaMalloc((void**)&device_output, frameDataSize);
+	// malloc for output (this is 3 times smaller since we only store gray values and not bgr)
+	cudaMalloc((void**)&device_output, grayFrameDataSize);
 	cudaCheckError();
 
 	// now copy the actual data to the device as input for the kernel
@@ -46,16 +49,27 @@ Mat modifyFrame(Mat frame)
 	int rows = frame.rows;
 	int columns = frame.cols;
 
+	// launch the color convert which converts to grayscale
 	void* args1[] = { &device_output, &device_input, &rows, &columns };
 	cudaLaunchKernel<void>(&colorConvert, gridDimension, blockDimension, args1);
 	cudaCheckError();
-	cudaDeviceSynchronize();
 
-	// clone input as result
-	Mat result = frame.clone();
+	// we now have the grayscale image in gpu memory with address given by device_output
+	// we now want the output to be the input
+	// and old input will be overwritten by new output
+	uchar* temp = device_input;
+	device_input = device_output;
+	device_output = temp;
+
+	// now launche the sobel filter which ...
+	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
+	cudaCheckError();
+
+	//
+	Mat result(rows, columns, CV_8UC1, Scalar(0));
 
 	// write modified data to result
-	cudaMemcpy(result.data, device_output, frameDataSize, cudaMemcpyDeviceToHost);
+	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);
 	cudaCheckError();
 
 	cudaFree(device_input);
@@ -67,6 +81,7 @@ Mat modifyFrame(Mat frame)
 int main(int, char**)
 {
 
+	//VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\Wildlife.wmv");
 	VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
 
 	if (!cap.isOpened())  // check if we succeeded
