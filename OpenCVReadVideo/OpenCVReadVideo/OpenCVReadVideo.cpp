@@ -13,7 +13,7 @@ using namespace std;
 //Macro for checking cuda errors following a cuda launch or api call
 #define cudaCheckError() { cudaError_t error = cudaGetLastError(); if (error != cudaSuccess) { printf("Cuda failure %s:%d: '%s'\n",__FILE__,__LINE__,cudaGetErrorString(error)); exit(EXIT_FAILURE);}}
 
-extern void addKernel(char* outputMatrix, char* inputMatrix, int rows, int columns);
+extern void colorConvert(unsigned char* grayImage, unsigned char* colorImage, int rows, int columns);
 
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame)
@@ -47,7 +47,7 @@ Mat modifyFrame(Mat frame)
 	int columns = frame.cols;
 
 	void* args1[] = { &device_output, &device_input, &rows, &columns };
-	cudaLaunchKernel<void>(&addKernel, gridDimension, blockDimension, args1);
+	cudaLaunchKernel<void>(&colorConvert, gridDimension, blockDimension, args1);
 	cudaCheckError();
 	cudaDeviceSynchronize();
 
@@ -93,8 +93,6 @@ int main(int, char**)
 			break;
 		}
 
-		
-
 		output = modifyFrame(frame);
 
 		// ------------------------------------------------
@@ -106,7 +104,7 @@ int main(int, char**)
 		// ------------------------------------------------
 
 		// show the output from device
-		imshow("edges", frame);
+		imshow("edges", output);
 		if (waitKey(1) >= 0) break;
 
 		cap >> frame;
