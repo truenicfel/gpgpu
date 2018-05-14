@@ -41,23 +41,35 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 			+(columns * row);    // select row
 
 		// the sobel kernels
-		int kernelX[] = { 1, 2, 1, 0, 0, 0, -1, -2, -1 };
-		int kernelY[] = { 1, 0, -1, 2, 0, -2, 1, 0, -1 };
+		int kernelX[] = { 1, 0, -1, 2, 0, -2, 1, 0, -1 };
+		int kernelY[] = { 1, 2, 1, 0, 0, 0, -1, -2, -1 };		
 
-		// iterate all values in kernelA and 8 neighbours
+		// the offsets for the offset
+		int offsets[] = {
+			- columns - 1,	- columns,	- columns + 1,
+			- 1,			0,			1,		
+			columns - 1,	columns,	columns + 1		
+		};
+
+		// iterate all values in kernelX and 8 neighbours
 		unsigned char sobelValueX = 0;
 		for (int index = 0; index < 9; index++) {
-			sobelValueX += inputImage[offset] * kernelX[8 - index]; // falsch !!
+			int actualOffset = offset + offsets[index];
+			if (actualOffset >= 0) {
+				sobelValueX += inputImage[actualOffset] * kernelX[index];
+			}
 		}
 
-		// iterate all values in kernelA and 8 neighbours
+		// iterate all values in kernelY and 8 neighbours
 		unsigned char sobelValueY = 0;
 		for (int index = 0; index < 9; index++) {
-			sobelValueX += inputImage[offset] * kernelY[8 - index];	// falsch !!
+			int actualOffset = offset + offsets[index];
+			if (actualOffset >= 0) {
+				sobelValueY += inputImage[actualOffset] * kernelY[index];
+			}
 		}
 
-		unsigned char sobelValue = sobelValueX*sobelValueX + sobelValueY*sobelValueY; // wurzel ziehen !!!
-
+		unsigned char sobelValue = (unsigned char) floor(sqrtf(pow((float)sobelValueX, 2.f) + pow((float)sobelValueY, 2.f))); 
 		outputImage[offset] = sobelValue;
 	}
 }

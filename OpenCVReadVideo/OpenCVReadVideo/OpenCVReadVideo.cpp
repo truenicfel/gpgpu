@@ -56,16 +56,16 @@ Mat modifyFrame(Mat frame)
 
 	// we now have the grayscale image in gpu memory with address given by device_output
 	// we now want the output to be the input
-	// and old input will be overwritten by new output
 	uchar* temp = device_input;
 	device_input = device_output;
 	device_output = temp;
 
-	// now launche the sobel filter which ...
-	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
+	// now launche the sobel filter
+	void* args2[] = { &device_output, &device_input, &rows, &columns };
+	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args2);
 	cudaCheckError();
 
-	//
+	
 	Mat result(rows, columns, CV_8UC1, Scalar(0));
 
 	// write modified data to result
@@ -113,7 +113,7 @@ int main(int, char**)
 		// ------------------------------------------------
 		//cvtColor(frame, edges, COLOR_BGR2GRAY);
 		//GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);
-		//Sobel(frame, edges, frame.depth(), 2, 2);
+		//Sobel(output, edges, frame.depth(), 2, 2);
 		//Canny(edges, edges, 0, 30, 3);
 		//imshow("edges", edges);
 		// ------------------------------------------------
