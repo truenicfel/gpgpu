@@ -31,14 +31,33 @@ __global__ void colorConvert(unsigned char* grayImage, unsigned char* colorImage
 
 __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns)
 {
-	// which pixel does this thread have to work on?
-	int column = blockIdx.x*blockDim.x + threadIdx.x;
-	int row = blockIdx.y*blockDim.y + threadIdx.y;
 
-	if ((column < columns) && (row < rows)) {
-		// calculate offset to access correct element
-		int offset = (column)             // offset in a row
-			+(columns * row);    // select row
+	// shared memory (the second index accesses the row)
+	__shared__ float ds_PIXELS[16][16];
+
+
+	// which column and row does this thread have in the GRID?
+	int columnGrid = blockIdx.x*blockDim.x + threadIdx.x;
+	int rowGrid = blockIdx.y*blockDim.y + threadIdx.y;
+
+	// which column and row does this thread have in the PICTURE?
+	int columnPicture = blockIdx.x*blockDim.x + threadIdx.x - 1;
+	int rowPicture = blockIdx.y*blockDim.y + threadIdx.y - 1;
+
+	// calculate picture offset
+	int offset = (columnPicture) + (columns * rowPicture);
+
+	// load stuff into shared memory
+	if (columnGrid != 0 && rowGrid != 0 && columnGrid <= columns && rowGrid <= rows) {
+		ds_PIXELS[blockDim.x][blockDim.y] = inputImage[offset];
+	}
+	else {
+		ds_PIXELS[blockDim.x][blockDim.y] = 0;
+	}
+
+	__syncthreads();
+	
+	if (columnGrid != 0 && rowGrid != 0 && columnGrid <= columns && rowGrid <= rows) {
 
 		// the sobel kernels
 		int kernelX[] = { 1, 0, -1, 2, 0, -2, 1, 0, -1 };
@@ -61,13 +80,7 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 		// iterate all values in kernelX and 8 neighbours
 		float sobelValueX = 0;
 		for (int index = 0; index < 9; index++) {
-			int pixelOffset = (column + pixelColumnOffsets[index]) + ((row + pixelRowOffsets[index]) * columns);
-			if (pixelOffset >= 0 && pixelOffset < rows * columns) {
-				sobelValueX += inputImage[pixelOffset] * kernelX[index];
-			}
-			else {
-				sobelValueX += inputImage[offset] * kernelX[index];
-			}
+			sobelValueX += ds_PIXELS[threadIdx.y][threadIdx.x] * kernelX[index];
 		}
 
 		// iterate all values in kernelY and 8 neighbours

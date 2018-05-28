@@ -15,7 +15,7 @@ using namespace std;
 
 extern void colorConvert(unsigned char* grayImage, unsigned char* colorImage, int rows, int columns);
 
-extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns);
+extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns, int blockSize);
 
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame)
@@ -24,7 +24,7 @@ Mat modifyFrame(Mat frame)
 	// this is fixed for now: 16 x 16 block size
 	int blockSize = 16;
 	dim3 blockDimension = dim3(blockSize, blockSize, 1);
-	dim3 gridDimension = dim3((frame.cols - 1) / blockSize + 1, (frame.rows - 1) / blockSize + 1, 1);
+	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize - 2) + 1, (frame.rows - 1) / (blockSize - 2) + 1, 1);
 
 	// size of mat data
 	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
@@ -60,8 +60,8 @@ Mat modifyFrame(Mat frame)
 	device_input = device_output;
 	device_output = temp;
 
-	// now launche the sobel filter
-	void* args2[] = { &device_output, &device_input, &rows, &columns };
+	// now launch the sobel filter
+	void* args2[] = { &device_output, &device_input, &rows, &columns, &blockSize };
 	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args2);
 	cudaCheckError();
 
