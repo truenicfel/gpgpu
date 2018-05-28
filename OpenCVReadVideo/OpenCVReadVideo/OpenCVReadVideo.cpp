@@ -66,7 +66,10 @@ Mat modifyFrame(Mat frame)
 	cudaCheckError();
 
 	
-	Mat result(rows, columns, CV_8UC1, Scalar(0));
+	Mat result(rows, columns, CV_8UC1);
+
+	//cout << result.size << endl;
+	//cout << result.type << endl;
 
 	// write modified data to result
 	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);

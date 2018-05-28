@@ -42,34 +42,48 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 
 		// the sobel kernels
 		int kernelX[] = { 1, 0, -1, 2, 0, -2, 1, 0, -1 };
-		int kernelY[] = { 1, 2, 1, 0, 0, 0, -1, -2, -1 };		
+		int kernelY[] = { 1, 2, 1, 0, 0, 0, -1, -2, -1 };
 
-		// the offsets for the offset
-		int offsets[] = {
-			- columns - 1,	- columns,	- columns + 1,
-			- 1,			0,			1,		
-			columns - 1,	columns,	columns + 1		
+		// the offsets for the columns to get the pixels
+		int pixelColumnOffsets[] = {
+			-1, 0,	1,
+			-1, 0, 1,
+			-1, 0,	1
+		};
+
+		// the offsets for the rows to get the pixels
+		int pixelRowOffsets[] = {
+			-1, -1,	-1,
+			 0,  0,  0,
+			 1,  1,  1
 		};
 
 		// iterate all values in kernelX and 8 neighbours
-		unsigned char sobelValueX = 0;
+		float sobelValueX = 0;
 		for (int index = 0; index < 9; index++) {
-			int actualOffset = offset + offsets[index];
-			if (actualOffset >= 0) {
-				sobelValueX += inputImage[actualOffset] * kernelX[index];
+			int pixelOffset = (column + pixelColumnOffsets[index]) + ((row + pixelRowOffsets[index]) * columns);
+			if (pixelOffset >= 0 && pixelOffset < rows * columns) {
+				sobelValueX += inputImage[pixelOffset] * kernelX[index];
+			}
+			else {
+				sobelValueX += inputImage[offset] * kernelX[index];
 			}
 		}
 
 		// iterate all values in kernelY and 8 neighbours
-		unsigned char sobelValueY = 0;
+		float sobelValueY = 0;
 		for (int index = 0; index < 9; index++) {
-			int actualOffset = offset + offsets[index];
-			if (actualOffset >= 0) {
-				sobelValueY += inputImage[actualOffset] * kernelY[index];
+			int pixelOffset = (column + pixelColumnOffsets[index]) + ((row + pixelRowOffsets[index]) * columns);
+			if (pixelOffset >= 0 && pixelOffset < rows * columns) {
+				sobelValueY += inputImage[pixelOffset] * kernelY[index];
 			}
+			else {
+				sobelValueY += inputImage[offset] * kernelY[index];
+			}
+			
 		}
 
-		unsigned char sobelValue = (unsigned char) floor(sqrtf(pow((float)sobelValueX, 2.f) + pow((float)sobelValueY, 2.f))); 
+		unsigned char sobelValue = sqrtf(sobelValueX * sobelValueX + sobelValueY * sobelValueY);
 		outputImage[offset] = sobelValue;
 	}
 }
