@@ -15,7 +15,7 @@ using namespace std;
 
 extern void colorConvert(unsigned char* grayImage, unsigned char* colorImage, int rows, int columns);
 
-extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns, int blockSize);
+extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns);
 
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame)
