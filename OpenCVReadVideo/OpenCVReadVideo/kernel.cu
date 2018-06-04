@@ -33,7 +33,7 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 {
 
 	// shared memory (the second index accesses the row)
-	__shared__ float ds_PIXELS[16][16];
+	__shared__ unsigned char ds_PIXELS[16][16];
 
 
 	// which column and row does this thread have in the GRID?
@@ -41,51 +41,68 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 	int rowGrid = blockIdx.y*blockDim.y + threadIdx.y;
 
 	// check if this thread is in the area of the picture + 1 (is this thread active?)
-	bool threadActive = columnGrid >= 0 && columnGrid <= columns + 1 && rowGrid >= 0 && rowGrid <= rows + 1;
+	bool threadActive = columnGrid <= columns && rowGrid <= rows;
 
 	// check if this thread is in the area of the picture (not at the edges of the grid)
-	bool inPicture = columnGrid > 0 && columnGrid <= columns && rowGrid > 0 && rowGrid <= rows;
+	bool inPicture = columnGrid > 0 && columnGrid < columns && rowGrid > 0 && rowGrid < rows;
+
+	// check if this thread is has to compute (true) or only load (false)
+	bool hasToCompute = threadIdx.x > 0 && threadIdx.y > 0 && threadIdx.x < blockDim.x - 1 && threadIdx.y < blockDim.y - 1;
 
 	// which column and row does this thread have in the PICTURE?
 	int columnPicture = blockIdx.x*blockDim.x + threadIdx.x - 1;
 	int rowPicture = blockIdx.y*blockDim.y + threadIdx.y - 1;
 
 	// calculate picture offset
-	int offset = (columnPicture)+(columns * rowPicture);
+	int offset = (columnPicture) + (columns * rowPicture);
 
 	if (threadActive) {
 
 		// load stuff into shared memory
 		if (inPicture) {
-			ds_PIXELS[blockDim.x][blockDim.y] = inputImage[offset];
+			ds_PIXELS[threadIdx.y][threadIdx.x] = inputImage[offset];
 		}
 		else {
-			ds_PIXELS[blockDim.x][blockDim.y] = 0;
+			ds_PIXELS[threadIdx.y][threadIdx.x] = 0;
 		}
 	}
 
 	// wait until all threads finished loading
 	__syncthreads();
-	
-	if (inPicture) {
+
+
+	if (hasToCompute && threadActive) {
 
 		// the sobel kernels
 		int kernelX[] = { 1, 0, -1, 2, 0, -2, 1, 0, -1 };
 		int kernelY[] = { 1, 2, 1, 0, 0, 0, -1, -2, -1 };
 
+		// the offsets for the columns to get the pixels
+		int pixelColumnOffsets[] = {
+			-1, 0,	1,
+			-1, 0, 1,
+			-1, 0,	1
+		};
+		
+		// the offsets for the rows to get the pixels
+		int pixelRowOffsets[] = {
+			-1, -1,	-1,
+			0,  0,  0,
+			1,  1,  1
+		};
+
 		// iterate all values in kernelX and 8 neighbours
 		float sobelValueX = 0;
 		for (int index = 0; index < 9; index++) {
-			sobelValueX += ds_PIXELS[threadIdx.y][threadIdx.x] * kernelX[8-index];
+			sobelValueX += ds_PIXELS[threadIdx.y + pixelRowOffsets[index]][threadIdx.x + pixelColumnOffsets[index]] * kernelX[index];
 		}
 
 		// iterate all values in kernelY and 8 neighbours
 		float sobelValueY = 0;
 		for (int index = 0; index < 9; index++) {
-			sobelValueY += ds_PIXELS[threadIdx.y][threadIdx.x] * kernelY[8-index];
+			sobelValueY += ds_PIXELS[threadIdx.y + pixelRowOffsets[index]][threadIdx.x + pixelColumnOffsets[index]] * kernelY[index];
 		}
-
 		unsigned char sobelValue = sqrtf(sobelValueX * sobelValueX + sobelValueY * sobelValueY);
-		outputImage[offset] = sobelValue;
+		outputImage[offset] = inputImage[offset];
 	}
 }

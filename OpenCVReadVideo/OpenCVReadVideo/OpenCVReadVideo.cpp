@@ -20,11 +20,10 @@ extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int row
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame)
 {
-	
 	// this is fixed for now: 16 x 16 block size
 	int blockSize = 16;
 	dim3 blockDimension = dim3(blockSize, blockSize, 1);
-	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize - 2) + 1, (frame.rows - 1) / (blockSize - 2) + 1, 1);
+	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize) + 1, (frame.rows - 1) / (blockSize) + 1, 1);
 
 	// size of mat data
 	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
@@ -33,6 +32,7 @@ Mat modifyFrame(Mat frame)
 	// device pointer
 	uchar* device_input = nullptr;
 	uchar* device_output = nullptr;
+	uchar* device_result = nullptr;
 
 	// malloc for input
 	cudaMalloc((void**)&device_input, frameDataSize);
@@ -41,6 +41,10 @@ Mat modifyFrame(Mat frame)
 	// malloc for output (this is 3 times smaller since we only store gray values and not bgr)
 	cudaMalloc((void**)&device_output, grayFrameDataSize);
 	cudaCheckError();
+	// malloc for result (this will store the result of sobel kernel)
+	cudaMalloc((void**)&device_result, grayFrameDataSize);
+	cudaCheckError();
+
 
 	// now copy the actual data to the device as input for the kernel
 	cudaMemcpy(device_input, frame.data, frameDataSize, cudaMemcpyHostToDevice);
@@ -54,29 +58,26 @@ Mat modifyFrame(Mat frame)
 	cudaLaunchKernel<void>(&colorConvert, gridDimension, blockDimension, args1);
 	cudaCheckError();
 
-	// we now have the grayscale image in gpu memory with address given by device_output
-	// we now want the output to be the input
-	uchar* temp = device_input;
-	device_input = device_output;
-	device_output = temp;
+	// adapt the grid dimension
+	gridDimension = dim3((frame.cols - 1) / (blockSize - 2)+1, (frame.rows - 1) / (blockSize - 2)+1, 1);
 
 	// now launch the sobel filter
-	void* args2[] = { &device_output, &device_input, &rows, &columns, &blockSize };
+	void* args2[] = { &device_result, &device_output, &rows, &columns, &blockSize };
 	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args2);
 	cudaCheckError();
-
 	
 	Mat result(rows, columns, CV_8UC1);
 
-	//cout << result.size << endl;
-	//cout << result.type << endl;
-
 	// write modified data to result
-	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);
+	cudaMemcpy(result.data, device_result, grayFrameDataSize, cudaMemcpyDeviceToHost);
 	cudaCheckError();
 
 	cudaFree(device_input);
+	cudaCheckError();
 	cudaFree(device_output);
+	cudaCheckError();
+	cudaFree(device_result);
+	cudaCheckError();
 
 	return result;
 }
