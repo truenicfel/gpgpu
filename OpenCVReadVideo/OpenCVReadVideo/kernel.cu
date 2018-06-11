@@ -35,26 +35,21 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 	// shared memory (the second index accesses the row)
 	__shared__ unsigned char ds_PIXELS[16][16];
 
-
-	// which column and row does this thread have in the GRID?
-	int columnGrid = blockIdx.x*blockDim.x + threadIdx.x;
-	int rowGrid = blockIdx.y*blockDim.y + threadIdx.y;
+	// picture coordinates
+	int column = blockIdx.x*(blockDim.x-2) + threadIdx.x - 1;
+	int row = blockIdx.y*(blockDim.y-2) + threadIdx.y - 1;
 
 	// check if this thread is in the area of the picture + 1 (is this thread active?)
-	bool threadActive = columnGrid <= columns && rowGrid <= rows;
+	bool threadActive = column <= columns && row <= rows;
 
 	// check if this thread is in the area of the picture (not at the edges of the grid)
-	bool inPicture = columnGrid > 0 && columnGrid < columns && rowGrid > 0 && rowGrid < rows;
+	bool inPicture = column > 0 && column < columns && row > 0 && row < rows;
 
 	// check if this thread is has to compute (true) or only load (false)
 	bool hasToCompute = threadIdx.x > 0 && threadIdx.y > 0 && threadIdx.x < blockDim.x - 1 && threadIdx.y < blockDim.y - 1;
 
-	// which column and row does this thread have in the PICTURE?
-	int columnPicture = blockIdx.x*blockDim.x + threadIdx.x - 1;
-	int rowPicture = blockIdx.y*blockDim.y + threadIdx.y - 1;
-
 	// calculate picture offset
-	int offset = (columnPicture) + (columns * rowPicture);
+	int offset = (column) + (columns * row);
 
 	if (threadActive) {
 
@@ -103,6 +98,8 @@ __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int
 			sobelValueY += ds_PIXELS[threadIdx.y + pixelRowOffsets[index]][threadIdx.x + pixelColumnOffsets[index]] * kernelY[index];
 		}
 		unsigned char sobelValue = sqrtf(sobelValueX * sobelValueX + sobelValueY * sobelValueY);
-		outputImage[offset] = inputImage[offset];
+		
+		outputImage[offset] = sobelValue;
 	}
+	
 }
