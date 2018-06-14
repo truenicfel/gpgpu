@@ -17,6 +17,12 @@ extern void colorConvert(unsigned char* grayImage, unsigned char* colorImage, in
 
 extern void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns);
 
+extern void histogrammPrimitive(unsigned int* histogrammVector, unsigned char* grayImage, int rows, int columns);
+
+extern void histogrammStride(unsigned int* histogrammVector, unsigned char* grayImage, int size);
+
+extern void histogrammStrideShared(unsigned int* histogrammVector, unsigned char* grayImage, int size);
+
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame)
 {
@@ -28,11 +34,13 @@ Mat modifyFrame(Mat frame)
 	// size of mat data
 	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
 	size_t grayFrameDataSize = frameDataSize / 3;
+	size_t histogrammSize = sizeof(int) * 256;
 
 	// device pointer
 	uchar* device_input = nullptr;
 	uchar* device_output = nullptr;
 	uchar* device_result = nullptr;
+	unsigned int* device_histogramm = nullptr;
 
 	// malloc for input
 	cudaMalloc((void**)&device_input, frameDataSize);
@@ -43,6 +51,9 @@ Mat modifyFrame(Mat frame)
 	cudaCheckError();
 	// malloc for result (this will store the result of sobel kernel)
 	cudaMalloc((void**)&device_result, grayFrameDataSize);
+	cudaCheckError();
+	// malloc for histogramm result (this will store the result of histogramm kernel)
+	cudaMalloc((void**)&device_histogramm, histogrammSize);
 	cudaCheckError();
 
 
@@ -58,19 +69,31 @@ Mat modifyFrame(Mat frame)
 	cudaLaunchKernel<void>(&colorConvert, gridDimension, blockDimension, args1);
 	cudaCheckError();
 
-	// adapt the grid dimension
-	gridDimension = dim3((frame.cols - 1) / (blockSize - 2)+1, (frame.rows - 1) / (blockSize - 2)+1, 1);
+	// adapt the the dimensions
+	blockDimension = dim3(blockSize, 1, 1);
+	gridDimension = dim3(((frame.cols * frame.rows) / blockDimension * 64), 1, 1);
 
-	// now launch the sobel filter
-	void* args2[] = { &device_result, &device_output, &rows, &columns, &blockSize };
-	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args2);
+	// now launch the histogramm kernel
+	void* args2[] = { &device_histogramm, &device_output, &rows, &columns };
+	cudaLaunchKernel<void>(&histogrammPrimitive, gridDimension, blockDimension, args2);
 	cudaCheckError();
 	
 	Mat result(rows, columns, CV_8UC1);
 
 	// write modified data to result
-	cudaMemcpy(result.data, device_result, grayFrameDataSize, cudaMemcpyDeviceToHost);
+	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);
 	cudaCheckError();
+	
+	int histogramm[256] = { 0 };
+
+
+	cudaMemcpy(histogramm, device_histogramm, histogrammSize, cudaMemcpyDeviceToHost);
+	cudaCheckError();
+
+	for (int i = 0, i < 256; i++) {
+		std::cout << histogramm[i] << ", ";
+	}
+	std::cout << std::endl;
 
 	cudaFree(device_input);
 	cudaCheckError();
