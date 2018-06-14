@@ -29,52 +29,6 @@ __global__ void colorConvert(unsigned char* grayImage, unsigned char* colorImage
 	}
 }
 
-// the gray image is a two dimensional array (row major) with # of rows given by rows and # number of columns given by columns
-// the histogramm vector is the output of this kernel. its an array of ints (4 bytes) with size 256 (# of possible gray values)
-__global__ void histogrammPrimitive(unsigned char* grayImage, unsigned char* histogrammVector, int rows, int columns)
-{
-	// which pixel does this thread have to work on?
-	int column = blockIdx.x*blockDim.x + threadIdx.x;
-	int row = blockIdx.y*blockDim.y + threadIdx.y;
-	
-	// calculate offset to access correct element
-	int offset = (column) + (columns * row);
-
-	// check if im in scope of the picture
-	if ((column < columns) && (row < rows)) {
-	
-		while (i < stride) {
-			// ...
-		}
-		// load gray Value from input image
-		unsigned char grayValue = grayImage[offset];
-		// add up
-		atomicAdd(&(histogrammVector[grayValue]), 1);
-	}
-}
-
-// the input image is now interpreted as a long one dimensional vector of bytes. the size is given by size.
-// the stride parameter tells this thread how many elements should be added up. the access to the memory is interleaved
-__global__ void histogrammStride(unsigned char* grayImage, unsigned char* histogrammVector, int size, int stride)
-{
-	// which pixel does this thread have to work on?
-	int column = blockIdx.x*blockDim.x + threadIdx.x;
-	int row = blockIdx.y*blockDim.y + threadIdx.y;
-	
-	// calculate offset to access correct element
-	int offset = (column) + (columns * row);
-
-	
-	
-	// check if im in scope of the picture
-	if ((column < columns) && (row < rows)) {
-		// load gray Value from input image
-		unsigned char grayValue = grayImage[offset];
-		// add up
-		atomicAdd(&(histogrammVector[grayValue]), 1);
-	}
-}
-
 __global__ void sobel(unsigned char* outputImage, unsigned char* inputImage, int rows, int columns)
 {
 
