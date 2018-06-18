@@ -45,7 +45,7 @@ __global__ void histogrammPrimitive(unsigned int* histogrammVector, unsigned cha
 		// load gray Value from input image
 		unsigned char grayValue = grayImage[offset];
 		// add up
-		atomicAdd(&(histogrammVector[grayValue]*4), 1);
+		atomicAdd(&(histogrammVector[grayValue]), 1);
 	}
 }
 
@@ -62,7 +62,7 @@ __global__ void histogrammStride(unsigned int* histogrammVector, unsigned char* 
 	// keep adding up until jumping out of the picture
 	while (index < size) {
 		// add up
-		atomicAdd(&(histogrammVector[grayImage[index]*4]), 1);
+		atomicAdd(&(histogrammVector[grayImage[index]]), 1);
 		// step stride forward
 		index += stride;
 	}
@@ -78,14 +78,12 @@ __global__ void histogrammStrideShared(unsigned int* histogrammVector, unsigned 
 
 	// zero shared memory (blockDim must be smaller than 256)
 	int toZeroPerThread = 256 / blockDim.x;
-	int index = 0;
+	int index = threadIdx.x;
 	while (index < toZeroPerThread) {
-		histogram[index+0] = 0;
-		histogram[index+1] = 0;
-		histogram[index+2] = 0;
-		histogram[index+3] = 0;
+		histogram[index] = 0;
 		index += blockDim.x;
 	}
+	__syncthreads();
 
 	// stride is total number of threads
 	int stride = blockDim.x * gridDim.x;
@@ -95,18 +93,19 @@ __global__ void histogrammStrideShared(unsigned int* histogrammVector, unsigned 
 
 	// keep adding up until jumping out of the picture
 	while (index < size) {
-		// add up (index *4 to access correct element)
-		atomicAdd(&(histogram[grayImage[index*4]]), 1);
+		// add up (index to access correct element)
+		atomicAdd(&(histogram[grayImage[index]]), 1);
 		// step stride forward
 		index += stride;
 	}
+	__syncthreads();
 
 	// now all the shared memory block have to be added up in global memory (histogrammVector)
 	// we can use the variable to Zeroper thread again
 	int toAddPerThread = toZeroPerThread;
-	index = 0;	
+	index = threadIdx.x;	
 	while (index < toAddPerThread) {
-		atomicAdd(&(histogrammVector[index*4]), histogram[index*4]);
+		atomicAdd(&(histogrammVector[index]), histogram[index]);
 		index += blockDim.x;
 	}
 }

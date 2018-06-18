@@ -24,8 +24,11 @@ extern void histogrammStride(unsigned int* histogrammVector, unsigned char* gray
 extern void histogrammStrideShared(unsigned int* histogrammVector, unsigned char* grayImage, int size);
 
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
-Mat modifyFrame(Mat frame)
+Mat modifyFrame(Mat frame, bool print)
 {
+	int rows = frame.rows;
+	int columns = frame.cols;
+
 	// this is fixed for now: 16 x 16 block size
 	int blockSize = 16;
 	dim3 blockDimension = dim3(blockSize, blockSize, 1);
@@ -35,6 +38,7 @@ Mat modifyFrame(Mat frame)
 	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
 	size_t grayFrameDataSize = frameDataSize / 3;
 	size_t histogrammSize = sizeof(int) * 256;
+	size_t totalNumberOfPixels = rows * columns;
 
 	// device pointer
 	uchar* device_input = nullptr;
@@ -56,13 +60,9 @@ Mat modifyFrame(Mat frame)
 	cudaMalloc((void**)&device_histogramm, histogrammSize);
 	cudaCheckError();
 
-
 	// now copy the actual data to the device as input for the kernel
 	cudaMemcpy(device_input, frame.data, frameDataSize, cudaMemcpyHostToDevice);
 	cudaCheckError();
-
-	int rows = frame.rows;
-	int columns = frame.cols;
 
 	// launch the color convert which converts to grayscale
 	void* args1[] = { &device_output, &device_input, &rows, &columns };
@@ -71,11 +71,11 @@ Mat modifyFrame(Mat frame)
 
 	// adapt the the dimensions
 	blockDimension = dim3(blockSize, 1, 1);
-	gridDimension = dim3(((frame.cols * frame.rows) / blockDimension * 64), 1, 1);
+	gridDimension = dim3(((frame.cols * frame.rows) / (blockDimension.x * 64)), 1, 1);
 
 	// now launch the histogramm kernel
-	void* args2[] = { &device_histogramm, &device_output, &rows, &columns };
-	cudaLaunchKernel<void>(&histogrammPrimitive, gridDimension, blockDimension, args2);
+	void* args2[] = { &device_histogramm, &device_output, &totalNumberOfPixels};
+	cudaLaunchKernel<void>(&histogrammStrideShared, gridDimension, blockDimension, args2);
 	cudaCheckError();
 	
 	Mat result(rows, columns, CV_8UC1);
@@ -86,14 +86,16 @@ Mat modifyFrame(Mat frame)
 	
 	int histogramm[256] = { 0 };
 
-
 	cudaMemcpy(histogramm, device_histogramm, histogrammSize, cudaMemcpyDeviceToHost);
 	cudaCheckError();
 
-	for (int i = 0, i < 256; i++) {
-		std::cout << histogramm[i] << ", ";
+	if (print) {
+		int sum = 0;
+		for (int i = 0; i < 256; i++) {
+			sum += histogramm[i];
+		}
+		std::cout << sum << std::endl;
 	}
-	std::cout << std::endl;
 
 	cudaFree(device_input);
 	cudaCheckError();
@@ -109,7 +111,7 @@ int main(int, char**)
 {
 
 	//VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\Wildlife.wmv");
-	VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
+	VideoCapture cap("H:\\Benutzer\\Dokumente\\GPGPU\\gpgpu\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
 
 	if (!cap.isOpened())  // check if we succeeded
 		return -1;
@@ -127,7 +129,7 @@ int main(int, char**)
 	cout << "frame: dims: " << frame.dims << ", size[0]: " << frame.size[0] << ", size[1]:" << frame.size[1] << ", step[0]: " << frame.step[0] << ", step[1]:" << frame.step[1];
 	cout << ", type: " << frame.type() << " (CV16U: " << CV_16UC1 << ", CV8UC3: " << CV_8UC3 << ")" << ", elemSize: " << frame.elemSize();
 	cout << ", rows: " << frame.rows << ", cols: " << frame.cols << ", size: " << frame.size << ", dataPtr: " << frame.data << endl;
-
+	int frameCounter = 0;
 	for (;;)
 	{	
 		
@@ -135,7 +137,7 @@ int main(int, char**)
 			break;
 		}
 
-		output = modifyFrame(frame);
+		output = modifyFrame(frame, frameCounter % 100 == 0);
 
 		// ------------------------------------------------
 		//cvtColor(frame, edges, COLOR_BGR2GRAY);
@@ -150,6 +152,7 @@ int main(int, char**)
 		if (waitKey(1) >= 0) break;
 
 		cap >> frame;
+		frameCounter++;
 	}
 	// the camera will be deinitialized automatically in VideoCapture destructor
 	getchar();
