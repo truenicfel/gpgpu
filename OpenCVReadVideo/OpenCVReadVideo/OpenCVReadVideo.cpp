@@ -23,6 +23,8 @@ extern void histogrammStride(unsigned int* histogrammVector, unsigned char* gray
 
 extern void histogrammStrideShared(unsigned int* histogrammVector, unsigned char* grayImage, int size);
 
+extern void sobelTexture(unsigned char* outputImage, cudaTextureObject_t inputImage, int rows, int columns);
+
 // provide with a frame the size of the frame: columns = widthofFrame and rows = height of frame
 Mat modifyFrame(Mat frame, bool print)
 {
@@ -108,41 +110,125 @@ Mat modifyFrame(Mat frame, bool print)
 	return result;
 }
 
-//Mat sobel(Mat frame) {
-//
-//	int rows = frame.rows;
-//	int columns = frame.cols;
-//
-//	// this is fixed for now: 16 x 16 block size
-//	int blockSize = 16;
-//	dim3 blockDimension = dim3(blockSize, blockSize, 1);
-//	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize)+1, (frame.rows - 1) / (blockSize)+1, 1);
-//
-//	// size of mat data
-//	size_t grayFrameDataSize = static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
-//
-//	// device pointer
-//	uchar* device_input = nullptr;
-//	uchar* device_output = nullptr;
-//
-//	// malloc for input
-//	cudaMalloc((void**)&device_input, grayFrameDataSize);
-//	cudaCheckError();
-//
-//	// malloc for output 
-//	cudaMalloc((void**)&device_output, grayFrameDataSize);
-//	cudaCheckError();
-//
-//	// now copy the actual data to the device as input for the kernel
-//	cudaMemcpy(device_input, frame.data, grayFrameDataSize, cudaMemcpyHostToDevice);
-//	cudaCheckError();
-//
-//	// launch the color convert which converts to grayscale
-//	void* args1[] = { &device_output, &device_input, &rows, &columns };
-//	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
-//	cudaCheckError();
-//
-//}
+Mat sobelCuda(Mat frame) {
+
+	int rows = frame.rows;
+	int columns = frame.cols;
+
+	// this is fixed for now: 16 x 16 block size
+	int blockSize = 16;
+	dim3 blockDimension = dim3(blockSize, blockSize, 1);
+	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize - 2) + 1, (frame.rows - 1) / (blockSize - 2) + 1, 1);
+
+	// size of mat data
+	size_t grayFrameDataSize = static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
+
+	// device pointer
+	uchar* device_input = nullptr;
+	uchar* device_output = nullptr;
+
+	// malloc for input
+	cudaMalloc((void**)&device_input, grayFrameDataSize);
+	cudaCheckError();
+
+	// malloc for output 
+	cudaMalloc((void**)&device_output, grayFrameDataSize);
+	cudaCheckError();
+
+	// now copy the actual data to the device as input for the kernel
+	cudaMemcpy(device_input, frame.data, grayFrameDataSize, cudaMemcpyHostToDevice);
+	cudaCheckError();
+
+	// launch the color convert which converts to grayscale
+	void* args1[] = { &device_output, &device_input, &rows, &columns };
+	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
+	cudaCheckError();
+
+	Mat result(rows, columns, CV_8UC1);
+
+	// write modified data to result
+	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);
+	cudaCheckError();
+
+	cudaFree(device_input);
+	cudaCheckError();
+	cudaFree(device_output);
+	cudaCheckError();
+
+	return result;
+}
+
+Mat sobelTextureCuda(Mat frame) {
+
+	int rows = frame.rows;
+	int columns = frame.cols;
+
+	// this is fixed for now: 16 x 16 block size
+	int blockSize = 16;
+	dim3 blockDimension = dim3(blockSize, blockSize, 1);
+	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize - 2) + 1, (frame.rows - 1) / (blockSize - 2) + 1, 1);
+
+	// size of mat data
+	size_t grayFrameDataSize = static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
+
+	cudaChannelFormatDesc channelDesc = cudaCreateChannelDesc(32, 0, 0, 0, cudaChannelFormatKindFloat);
+	cudaArray_t cuArray;
+	cudaMallocArray(&cuArray, &channelDesc, frame.size[0], frame.size[1]);
+	cudaMemcpyToArray(cuArray, 0, 0, frame.data, grayFrameDataSize, cudaMemcpyHostToDevice);
+
+	struct cudaResourceDesc resDesc;
+	memset(&resDesc, 0, sizeof(resDesc));
+	resDesc.resType = cudaResourceTypeArray;
+	resDesc.res.array.array = cuArray;
+
+	struct cudaTextureDesc texDesc;
+	memset(&texDesc, 0, sizeof(texDesc));
+	texDesc.addressMode[0] = cudaAddressModeWrap;
+	texDesc.addressMode[1] = cudaAddressModeWrap;
+	texDesc.filterMode = cudaFilterModeLinear;
+	texDesc.readMode = cudaReadModeElementType;
+	texDesc.normalizedCoords = 1;
+
+	cudaTextureObject_t texObj = 0;
+	cudaCreateTextureObject(&texObj, &resDesc, &texDesc, NULL);
+
+	// device pointer
+	uchar* device_input = nullptr;
+	uchar* device_output = nullptr;
+
+	// malloc for input
+	cudaMalloc((void**)&device_input, grayFrameDataSize);
+	cudaCheckError();
+
+	// malloc for output 
+	cudaMalloc((void**)&device_output, grayFrameDataSize);
+	cudaCheckError();
+
+	// now copy the actual data to the device as input for the kernel
+	cudaMemcpy(device_input, frame.data, grayFrameDataSize, cudaMemcpyHostToDevice);
+	cudaCheckError();
+
+	// launch the color convert which converts to grayscale
+	void* args1[] = { &device_output, &texObj, &rows, &columns };
+	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
+	cudaCheckError();
+
+	Mat result(rows, columns, CV_8UC1);
+
+	// write modified data to result
+	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);
+	cudaCheckError();
+
+	cudaFree(device_input);
+	cudaCheckError();
+	cudaFree(device_output);
+	cudaCheckError();
+	cudaDestroyTextureObject(texObj);
+	cudaFreeArray(cuArray);
+	cudaCheckError();
+
+	return result;
+}
 
 int main(int, char**)
 {
@@ -175,6 +261,7 @@ int main(int, char**)
 		}
 
 		output = modifyFrame(frame, frameCounter % 100 == 0);
+		output = sobelTextureCuda(output);
 
 		// ------------------------------------------------
 		//cvtColor(frame, edges, COLOR_BGR2GRAY);
