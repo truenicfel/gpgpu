@@ -103,9 +103,46 @@ Mat modifyFrame(Mat frame, bool print)
 	cudaCheckError();
 	cudaFree(device_result);
 	cudaCheckError();
-
+	cudaFree(device_histogramm);
+	cudaCheckError();
 	return result;
 }
+
+//Mat sobel(Mat frame) {
+//
+//	int rows = frame.rows;
+//	int columns = frame.cols;
+//
+//	// this is fixed for now: 16 x 16 block size
+//	int blockSize = 16;
+//	dim3 blockDimension = dim3(blockSize, blockSize, 1);
+//	dim3 gridDimension = dim3((frame.cols - 1) / (blockSize)+1, (frame.rows - 1) / (blockSize)+1, 1);
+//
+//	// size of mat data
+//	size_t grayFrameDataSize = static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
+//
+//	// device pointer
+//	uchar* device_input = nullptr;
+//	uchar* device_output = nullptr;
+//
+//	// malloc for input
+//	cudaMalloc((void**)&device_input, grayFrameDataSize);
+//	cudaCheckError();
+//
+//	// malloc for output 
+//	cudaMalloc((void**)&device_output, grayFrameDataSize);
+//	cudaCheckError();
+//
+//	// now copy the actual data to the device as input for the kernel
+//	cudaMemcpy(device_input, frame.data, grayFrameDataSize, cudaMemcpyHostToDevice);
+//	cudaCheckError();
+//
+//	// launch the color convert which converts to grayscale
+//	void* args1[] = { &device_output, &device_input, &rows, &columns };
+//	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
+//	cudaCheckError();
+//
+//}
 
 int main(int, char**)
 {

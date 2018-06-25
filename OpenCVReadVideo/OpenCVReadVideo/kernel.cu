@@ -77,7 +77,7 @@ __global__ void histogrammStrideShared(unsigned int* histogrammVector, unsigned 
 	__shared__ unsigned int histogram[256];
 
 	// zero shared memory (blockDim must be smaller than 256)
-	int toZeroPerThread = 256 / blockDim.x;
+	int toZeroPerThread = 256;
 	int index = threadIdx.x;
 	while (index < toZeroPerThread) {
 		histogram[index] = 0;
@@ -102,7 +102,7 @@ __global__ void histogrammStrideShared(unsigned int* histogrammVector, unsigned 
 
 	// now all the shared memory block have to be added up in global memory (histogrammVector)
 	// we can use the variable to Zeroper thread again
-	int toAddPerThread = toZeroPerThread;
+	int toAddPerThread = 256;
 	index = threadIdx.x;	
 	while (index < toAddPerThread) {
 		atomicAdd(&(histogrammVector[index]), histogram[index]);
