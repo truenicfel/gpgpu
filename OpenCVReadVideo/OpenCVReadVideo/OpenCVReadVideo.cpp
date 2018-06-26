@@ -114,6 +114,7 @@ Mat grayAndSobelUsingStream(Mat frame) {
 	int rows = frame.rows;
 	int columns = frame.cols;
 
+	// this will also be used as an intermediate storage
 	Mat result(rows, columns, CV_8UC1);
 
 	// this is fixed for now: 16 x 16 block size
@@ -140,6 +141,10 @@ Mat grayAndSobelUsingStream(Mat frame) {
 	// create streams for colorConvert- and sobel-kernel
 	cudaStream_t streamColorConvert;
 	cudaStream_t streamSobel;
+	cudaStreamCreate(&streamColorConvert);
+	cudaCheckError();
+	cudaStreamCreate(&streamSobel);
+	cudaCheckError();
 
 	// create event that marks when the color convert stream is finished
 	// (this is just testing stuff. this could be done easier using stream sync.)
@@ -158,24 +163,35 @@ Mat grayAndSobelUsingStream(Mat frame) {
 	cudaLaunchKernel<void>(&colorConvert, gridDimensionColorConvert, blockDimension, args1, 0, streamColorConvert);
 	cudaCheckError();
 
+	cudaMemcpyAsync(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost, streamColorConvert);
+	cudaCheckError();
+
+	// the next two instructions are just there for experimenting with streams
+
 	// set event
-	cudaEventRecord(colorConvertFinished, streamColorConvert):
+	cudaEventRecord(colorConvertFinished, streamColorConvert);
+	cudaCheckError();
 
 	// sobel:
 	cudaStreamWaitEvent(streamSobel, colorConvertFinished, 0);
-
-	// output becomes input and input becomes output
-	void* args1[] = { &device_input, &device_output, &rows, &columns };
-	cudaLaunchKernel<void>(&sobel, gridDimensionSobel, blockDimension, args1, 0, streamSobel);
 	cudaCheckError();
 
-	// because device_input contains the result we will copy it from there
-	cudaMemcpyAsync(result.data, device_input, frameDataSize, cudaMemcpyDeviceToHost, streamSobel);
-	cudaCheckError()
+	cudaMemcpyAsync(device_input, result.data, grayFrameDataSize, cudaMemcpyHostToDevice, streamSobel);
+	cudaCheckError();
+
+	// output becomes input and input becomes output
+	void* args2[] = { &device_output, &device_input, &rows, &columns };
+	cudaLaunchKernel<void>(&sobel, gridDimensionSobel, blockDimension, args2, 0, streamSobel);
+	cudaCheckError();
+
+	//// because device_input contains the result we will copy it from there
+	cudaMemcpyAsync(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost, streamSobel);
+	cudaCheckError();
 
 	// alternative:
-	// cudaDeviceSynchronize();
-	cudaStreamSynchronize(streamSobel);
+	cudaDeviceSynchronize();
+	//cudaStreamSynchronize(streamSobel);
+	cudaCheckError();
 
 	return result;
 
@@ -323,8 +339,8 @@ void normalLaunch(VideoCapture cap) {
 			break;
 		}
 
-		output = modifyFrame(frame, frameCounter % 100 == 0);
-		output = sobelTextureCuda(output);
+		//output = modifyFrame(frame, frameCounter % 100 == 0);
+		output = grayAndSobelUsingStream(frame);
 
 		// ------------------------------------------------
 		//cvtColor(frame, edges, COLOR_BGR2GRAY);
@@ -343,30 +359,6 @@ void normalLaunch(VideoCapture cap) {
 	}
 	// the camera will be deinitialized automatically in VideoCapture destructor
 	getchar();
-}
-
-void streamLaunch() {
-	Mat edges;
-	namedWindow("edges", 1);
-
-	// stores a single frame (input to device)
-	Mat frame;
-	// stores a single frame (output from device)
-	Mat output;
-	// get a new frame from camera
-	cap >> frame;
-
-	// start a stream for every frame
-	while (frame.dims != 0) {
-
-		if (waitKey(1) >= 0) break;
-
-		cap >> frame;
-	}
-
-	// show the output from device
-	imshow("edges", output);
-
 }
 
 int main(int, char**)
