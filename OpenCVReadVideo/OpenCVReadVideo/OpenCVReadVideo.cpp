@@ -1,4 +1,4 @@
-// OpenCVReadVideo.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+// OpenCVReadVideo.cpp : Definiert den Einstiegspunkt fuer die Konsolenanwendung.
 //
 
 #include <iostream>
@@ -51,7 +51,6 @@ Mat modifyFrame(Mat frame, bool print)
 	// malloc for input
 	cudaMalloc((void**)&device_input, frameDataSize);
 	cudaCheckError();
-	//printf("%p", (void*)device_input);
 	// malloc for output (this is 3 times smaller since we only store gray values and not bgr)
 	cudaMalloc((void**)&device_output, grayFrameDataSize);
 	cudaCheckError();
@@ -79,13 +78,13 @@ Mat modifyFrame(Mat frame, bool print)
 	void* args2[] = { &device_histogramm, &device_output, &totalNumberOfPixels};
 	cudaLaunchKernel<void>(&histogrammStrideShared, gridDimension, blockDimension, args2);
 	cudaCheckError();
-	
+
 	Mat result(rows, columns, CV_8UC1);
 
 	// write modified data to result
 	cudaMemcpy(result.data, device_output, grayFrameDataSize, cudaMemcpyDeviceToHost);
 	cudaCheckError();
-	
+
 	int histogramm[256] = { 0 };
 
 	cudaMemcpy(histogramm, device_histogramm, histogrammSize, cudaMemcpyDeviceToHost);
@@ -110,6 +109,78 @@ Mat modifyFrame(Mat frame, bool print)
 	return result;
 }
 
+Mat grayAndSobelUsingStream(Mat frame) {
+
+	int rows = frame.rows;
+	int columns = frame.cols;
+
+	Mat result(rows, columns, CV_8UC1);
+
+	// this is fixed for now: 16 x 16 block size
+	int blockSize = 16;
+	dim3 blockDimension = dim3(blockSize, blockSize, 1);
+	dim3 gridDimensionColorConvert = dim3((frame.cols - 1) / (blockSize) + 1, (frame.rows - 1) / (blockSize) + 1, 1);
+	dim3 gridDimensionSobel = dim3((frame.cols - 1) / (blockSize - 2) + 1, (frame.rows - 1) / (blockSize - 2) + 1, 1);
+
+	// size of mat data
+	size_t frameDataSize = frame.elemSize() * static_cast<size_t>(frame.size[0]) * static_cast<size_t>(frame.size[1]) * sizeof(uint8_t);
+	size_t grayFrameDataSize = frameDataSize / 3;
+
+	// device pointer
+	uchar* device_input = nullptr;
+	uchar* device_output = nullptr;
+
+	// host alloc for input (pinned memory)
+	cudaHostAlloc((void**)&device_input, frameDataSize, cudaHostAllocDefault);
+	cudaCheckError();
+	// host alloc for output (pinned memory)(this is 3 times smaller since we only store gray values and not bgr)
+	cudaHostAlloc((void**)&device_output, grayFrameDataSize, cudaHostAllocDefault);
+	cudaCheckError();
+
+	// create streams for colorConvert- and sobel-kernel
+	cudaStream_t streamColorConvert;
+	cudaStream_t streamSobel;
+
+	// create event that marks when the color convert stream is finished
+	// (this is just testing stuff. this could be done easier using stream sync.)
+	cudaEvent_t colorConvertFinished;
+	cudaEventCreate(&colorConvertFinished);
+
+	// fill the streams
+
+	// color convert:
+	// copy data as input for the kernel
+	cudaMemcpyAsync(device_input, frame.data, frameDataSize, cudaMemcpyHostToDevice, streamColorConvert);
+	cudaCheckError();
+
+	// launch the color convert which converts to grayscale
+	void* args1[] = { &device_output, &device_input, &rows, &columns };
+	cudaLaunchKernel<void>(&colorConvert, gridDimensionColorConvert, blockDimension, args1, 0, streamColorConvert);
+	cudaCheckError();
+
+	// set event
+	cudaEventRecord(colorConvertFinished, streamColorConvert):
+
+	// sobel:
+	cudaStreamWaitEvent(streamSobel, colorConvertFinished, 0);
+
+	// output becomes input and input becomes output
+	void* args1[] = { &device_input, &device_output, &rows, &columns };
+	cudaLaunchKernel<void>(&sobel, gridDimensionSobel, blockDimension, args1, 0, streamSobel);
+	cudaCheckError();
+
+	// because device_input contains the result we will copy it from there
+	cudaMemcpyAsync(result.data, device_input, frameDataSize, cudaMemcpyDeviceToHost, streamSobel);
+	cudaCheckError()
+
+	// alternative:
+	// cudaDeviceSynchronize();
+	cudaStreamSynchronize(streamSobel);
+
+	return result;
+
+}
+
 Mat sobelCuda(Mat frame) {
 
 	int rows = frame.rows;
@@ -131,7 +202,7 @@ Mat sobelCuda(Mat frame) {
 	cudaMalloc((void**)&device_input, grayFrameDataSize);
 	cudaCheckError();
 
-	// malloc for output 
+	// malloc for output
 	cudaMalloc((void**)&device_output, grayFrameDataSize);
 	cudaCheckError();
 
@@ -139,7 +210,7 @@ Mat sobelCuda(Mat frame) {
 	cudaMemcpy(device_input, frame.data, grayFrameDataSize, cudaMemcpyHostToDevice);
 	cudaCheckError();
 
-	// launch the color convert which converts to grayscale
+	// launch the sobel kernel
 	void* args1[] = { &device_output, &device_input, &rows, &columns };
 	cudaLaunchKernel<void>(&sobel, gridDimension, blockDimension, args1);
 	cudaCheckError();
@@ -200,7 +271,7 @@ Mat sobelTextureCuda(Mat frame) {
 	cudaMalloc((void**)&device_input, grayFrameDataSize);
 	cudaCheckError();
 
-	// malloc for output 
+	// malloc for output
 	cudaMalloc((void**)&device_output, grayFrameDataSize);
 	cudaCheckError();
 
@@ -230,15 +301,7 @@ Mat sobelTextureCuda(Mat frame) {
 	return result;
 }
 
-int main(int, char**)
-{
-
-	//VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\Wildlife.wmv");
-	VideoCapture cap("H:\\Benutzer\\Dokumente\\GPGPU\\gpgpu\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
-
-	if (!cap.isOpened())  // check if we succeeded
-		return -1;
-
+void normalLaunch(VideoCapture cap) {
 	Mat edges;
 	namedWindow("edges", 1);
 
@@ -247,15 +310,15 @@ int main(int, char**)
 	// stores a single frame (output from device)
 	Mat output;
 	// get a new frame from camera
-	cap >> frame; 
+	cap >> frame;
 	// print some video data...
 	cout << "frame: dims: " << frame.dims << ", size[0]: " << frame.size[0] << ", size[1]:" << frame.size[1] << ", step[0]: " << frame.step[0] << ", step[1]:" << frame.step[1];
 	cout << ", type: " << frame.type() << " (CV16U: " << CV_16UC1 << ", CV8UC3: " << CV_8UC3 << ")" << ", elemSize: " << frame.elemSize();
 	cout << ", rows: " << frame.rows << ", cols: " << frame.cols << ", size: " << frame.size << ", dataPtr: " << frame.data << endl;
 	int frameCounter = 0;
 	for (;;)
-	{	
-		
+	{
+
 		if (frame.dims == 0) { // we're done
 			break;
 		}
@@ -280,5 +343,42 @@ int main(int, char**)
 	}
 	// the camera will be deinitialized automatically in VideoCapture destructor
 	getchar();
+}
+
+void streamLaunch() {
+	Mat edges;
+	namedWindow("edges", 1);
+
+	// stores a single frame (input to device)
+	Mat frame;
+	// stores a single frame (output from device)
+	Mat output;
+	// get a new frame from camera
+	cap >> frame;
+
+	// start a stream for every frame
+	while (frame.dims != 0) {
+
+		if (waitKey(1) >= 0) break;
+
+		cap >> frame;
+	}
+
+	// show the output from device
+	imshow("edges", output);
+
+}
+
+int main(int, char**)
+{
+
+	//VideoCapture cap("H:\\Benutzer\\gpgpu\\OpenCVReadVideo\\Videos\\Wildlife.wmv");
+	VideoCapture cap("H:\\Benutzer\\Dokumente\\GPGPU\\gpgpu\\OpenCVReadVideo\\Videos\\robotica_1080.mp4");
+
+	if (!cap.isOpened())  // check if we succeeded
+		return -1;
+
+	normalLaunch(cap);
+
 	return 0;
 }
