@@ -1,0 +1,16 @@
+﻿Build started 02.07.2018 14:02:37.
+     1>Project "H:\gpgpu\GPGPU\build\ImageLoader\ImageLoader.vcxproj" on node 4 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule H:/gpgpu/GPGPU/ImageLoader/CMakeLists.txt
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/ImageLoader/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source /IH:\gpgpu\GPGPU\Dependencies\freeglut\include /IH:\gpgpu\GPGPU\Dependencies\GLTools\include /IH:\gpgpu\GPGPU\Dependencies\AntTweakBar\include /IH:\gpgpu\GPGPU\Dependencies\glew\include /IH:\gpgpu\GPGPU /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D FREEIMAGE_LIB /D TW_STATIC /D _CRT_SECURE_NO_WARNINGS /D FREEGLUT_LIB_PRAGMAS=0 /D FREEGLUT_STATIC /D TW_NO_LIB_PRAGMA /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"ImageLoader.dir\Debug\\" /Fd"ImageLoader.dir\Debug\ImageLoader.pdb" /Gd /TP /errorReport:prompt H:\gpgpu\GPGPU\ImageLoader\ImageLoader.cpp
+         ImageLoader.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\Lib.exe /OUT:"H:\gpgpu\GPGPU\build\ImageLoader\Debug\ImageLoader.lib" /NOLOGO /MACHINE:X64  /machine:x64 ImageLoader.dir\Debug\ImageLoader.obj
+         ImageLoader.vcxproj -> H:\gpgpu\GPGPU\build\ImageLoader\Debug\ImageLoader.lib
+     1>Done Building Project "H:\gpgpu\GPGPU\build\ImageLoader\ImageLoader.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.47

@@ -1,0 +1,41 @@
+﻿Build started 02.07.2018 14:01:31.
+     1>Project "H:\gpgpu\GPGPU\build\Dependencies\GLTools\GLTools.vcxproj" on node 3 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule H:/gpgpu/GPGPU/Dependencies/GLTools/CMakeLists.txt
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/GLTools/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\GLTools\include /IH:\gpgpu\GPGPU\Dependencies\glew\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"GLTools.dir\Debug\\" /Fd"GLTools.dir\Debug\GLTools.pdb" /Gd /TP /errorReport:prompt H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLBatch.cpp H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLShaderManager.cpp H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTriangleBatch.cpp H:\gpgpu\GPGPU\Dependencies\GLTools\src\math3d.cpp
+         GLBatch.cpp
+         GLShaderManager.cpp
+         GLTools.cpp
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(395): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(396): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(407): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(408): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(419): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(420): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(432): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(433): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(528): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(529): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(541): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(542): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(559): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(560): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(572): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp(573): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         GLTriangleBatch.cpp
+         math3d.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\Lib.exe /OUT:"H:\gpgpu\GPGPU\build\Dependencies\GLTools\Debug\GLTools.lib" /NOLOGO /MACHINE:X64  /machine:x64 GLTools.dir\Debug\GLBatch.obj
+         GLTools.dir\Debug\GLShaderManager.obj
+         GLTools.dir\Debug\GLTools.obj
+         GLTools.dir\Debug\GLTriangleBatch.obj
+         GLTools.dir\Debug\math3d.obj
+         GLTools.vcxproj -> H:\gpgpu\GPGPU\build\Dependencies\GLTools\Debug\GLTools.lib
+     1>Done Building Project "H:\gpgpu\GPGPU\build\Dependencies\GLTools\GLTools.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.71

@@ -1,0 +1,10 @@
+﻿Build started 02.07.2018 14:02:39.
+     1>Project "H:\gpgpu\GPGPU\build\ALL_BUILD.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule H:/gpgpu/GPGPU/CMakeLists.txt
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/CMakeFiles/generate.stamp is up-to-date.
+     1>Done Building Project "H:\gpgpu\GPGPU\build\ALL_BUILD.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.43

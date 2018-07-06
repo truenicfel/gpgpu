@@ -1,0 +1,596 @@
+﻿Build started 02.07.2018 14:01:30.
+     1>Project "H:\gpgpu\GPGPU\build\Dependencies\FreeImage\FreeImage.vcxproj" on node 4 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/FreeImage/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D OPJ_STATIC /D FREEIMAGE_LIB /D NO_LCMS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"FreeImage.dir\Debug\\" /Fd"FreeImage.dir\Debug\FreeImage.pdb" /Gd /TP /errorReport:prompt H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\Deprecated.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\BitmapAccess.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\CacheFile.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ColorLookup.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion16_555.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion16_565.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion24.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion32.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion4.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion8.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ConversionRGBF.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ConversionType.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\FreeImage.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\FreeImageIO.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\GetType.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Halftoning.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\J2KHelper.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\MemoryIO.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\MultiPage.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\NNQuantizer.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PixelAccess.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Plugin.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginBMP.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginCUT.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginDDS.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginG3.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginGIF.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginHDR.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginICO.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginIFF.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJ2K.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJP2.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJPEG.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginKOALA.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginMNG.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPCD.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPCX.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPFM.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPICT.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPNG.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPNM.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPSD.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginRAS.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginSGI.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginTARGA.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginTIFF.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginWBMP.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginXBM.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginXPM.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\TIFFLogLuv.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ToneMapping.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\WuQuantizer.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ZLibInterface.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoColorConvert.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoDrago03.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoFattal02.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoReinhard05.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\BSplineRotate.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Background.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Channels.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\ClassicRotate.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Colors.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\CopyPaste.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Display.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Flip.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\JPEGTransform.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\MultigridPoissonSolver.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Rescale.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Resize.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\Exif.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FIRational.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FreeImageTag.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\IPTC.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\TagConversion.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\TagLib.cpp H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\XTIFF.cpp
+         Deprecated.cpp
+         DeprecationMgr.cpp
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.cpp(49): warning C4477: 'sprintf' : format string '%i' requires an argument of type 'int', but variadic argument 2 has type 'unsigned __int64'
+         H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.cpp(49): note: consider using '%zi' in the format string
+         BitmapAccess.cpp
+         CacheFile.cpp
+         ColorLookup.cpp
+         Conversion.cpp
+         Conversion16_555.cpp
+         Conversion16_565.cpp
+         Conversion24.cpp
+         Conversion32.cpp
+         Conversion4.cpp
+         Conversion8.cpp
+         ConversionRGBF.cpp
+         ConversionType.cpp
+         FreeImage.cpp
+         FreeImageIO.cpp
+         GetType.cpp
+         Halftoning.cpp
+         J2KHelper.cpp
+         MemoryIO.cpp
+         Generating Code...
+         Compiling...
+         MultiPage.cpp
+         NNQuantizer.cpp
+         PSDParser.cpp
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.cpp(1009): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.cpp(1069): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+         PixelAccess.cpp
+         Plugin.cpp
+         PluginBMP.cpp
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginBMP.cpp(1003): warning C4309: 'argument': truncation of constant value
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginBMP.cpp(1012): warning C4309: 'argument': truncation of constant value
+         PluginCUT.cpp
+         PluginDDS.cpp
+         PluginG3.cpp
+         PluginGIF.cpp
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginGIF.cpp(1021): warning C4477: 'sprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+         H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginGIF.cpp(1021): note: consider using '%zd' in the format string
+         PluginHDR.cpp
+         PluginICO.cpp
+         PluginIFF.cpp
+         PluginJ2K.cpp
+         PluginJP2.cpp
+         PluginJPEG.cpp
+         PluginKOALA.cpp
+         PluginMNG.cpp
+         PluginPCD.cpp
+         PluginPCX.cpp
+         Generating Code...
+         Compiling...
+         PluginPFM.cpp
+         PluginPICT.cpp
+         PluginPNG.cpp
+         PluginPNM.cpp
+         PluginPSD.cpp
+         PluginRAS.cpp
+         PluginSGI.cpp
+         PluginTARGA.cpp
+         PluginTIFF.cpp
+         PluginWBMP.cpp
+         PluginXBM.cpp
+         PluginXPM.cpp
+         TIFFLogLuv.cpp
+         ToneMapping.cpp
+         WuQuantizer.cpp
+         ZLibInterface.cpp
+         tmoColorConvert.cpp
+         tmoDrago03.cpp
+         tmoFattal02.cpp
+         tmoReinhard05.cpp
+         Generating Code...
+         Compiling...
+         BSplineRotate.cpp
+         Background.cpp
+         Channels.cpp
+         ClassicRotate.cpp
+         Colors.cpp
+         CopyPaste.cpp
+         Display.cpp
+         Flip.cpp
+         JPEGTransform.cpp
+         MultigridPoissonSolver.cpp
+         Rescale.cpp
+         Resize.cpp
+         Exif.cpp
+         FIRational.cpp
+         FreeImageTag.cpp
+         IPTC.cpp
+         TagConversion.cpp
+         TagLib.cpp
+         XTIFF.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath /IH:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D OPJ_STATIC /D FREEIMAGE_LIB /D NO_LCMS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"FreeImage.dir\Debug\\" /Fd"FreeImage.dir\Debug\FreeImage.pdb" /Gd /TC /errorReport:prompt H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jaricom.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcapimin.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcapistd.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcarith.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jccoefct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jccolor.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcdctmgr.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jchuff.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcinit.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmainct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmarker.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmaster.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcomapi.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcparam.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcprepct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcsample.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jctrans.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdapimin.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdapistd.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdarith.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdatadst.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdatasrc.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdcoefct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdcolor.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jddctmgr.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdhuff.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdinput.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmainct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmarker.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmaster.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmerge.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdpostct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdsample.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdtrans.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jerror.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctflt.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctfst.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctint.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctflt.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctfst.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctint.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemnobs.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jquant1.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jquant2.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jutils.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\transupp.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_callback_xs.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_io.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_prc.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_xs.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_cms.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_display.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_dither.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_error.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_filter.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_hlapi.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_jpeg.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_object_prc.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_pixels.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_prop_xs.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_read.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_trace.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_write.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_zlib.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\bio.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\dwt.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\event.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\image.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k_lib.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jp2.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jpt.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mct.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mqc.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\openjpeg.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\pi.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\raw.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tcd.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tgt.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\png.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngerror.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pnggccrd.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngget.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngmem.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngread.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrio.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrtran.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngtrans.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngvcrd.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwio.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwrite.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwtran.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwutil.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_aux.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_close.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_codec.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_color.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_compress.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirinfo.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirread.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirwrite.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dumpmode.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_error.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_extension.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3sm.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_flush.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_getimage.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_jpeg.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_luv.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_lzw.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_next.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_ojpeg.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_open.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_pixarlog.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_predict.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_print.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_read.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_strip.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_swab.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_thunder.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_tile.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_version.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_warning.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_write.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_zip.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\adler32.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\compress.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\crc32.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\deflate.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\gzio.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\infback.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffast.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inflate.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inftrees.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\trees.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\uncompr.c H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zutil.c
+         jaricom.c
+         jcapimin.c
+         jcapistd.c
+         jcarith.c
+         jccoefct.c
+         jccolor.c
+         jcdctmgr.c
+         jchuff.c
+         jcinit.c
+         jcmainct.c
+         jcmarker.c
+         jcmaster.c
+         jcomapi.c
+         jcparam.c
+         jcprepct.c
+         jcsample.c
+         jctrans.c
+         jdapimin.c
+         jdapistd.c
+         jdarith.c
+         Generating Code...
+         Compiling...
+         jdatadst.c
+         jdatasrc.c
+         jdcoefct.c
+         jdcolor.c
+         jddctmgr.c
+         jdhuff.c
+         jdinput.c
+         jdmainct.c
+         jdmarker.c
+         jdmaster.c
+         jdmerge.c
+         jdpostct.c
+         jdsample.c
+         jdtrans.c
+         jerror.c
+         jfdctflt.c
+         jfdctfst.c
+         jfdctint.c
+         jidctflt.c
+         jidctfst.c
+         Generating Code...
+         Compiling...
+         jidctint.c
+         jmemmgr.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c(306): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c(366): warning C4267: '+=': conversion from 'size_t' to 'long', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c(976): warning C4267: '-=': conversion from 'size_t' to 'long', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c(990): warning C4267: '-=': conversion from 'size_t' to 'long', possible loss of data
+         jmemnobs.c
+         jquant1.c
+         jquant2.c
+         jutils.c
+         transupp.c
+         libmng_callback_xs.c
+         libmng_chunk_descr.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.c(362): warning C4267: 'initializing': conversion from 'size_t' to 'mng_uint16', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.c(4195): warning C4244: '=': conversion from '__int64' to 'mng_uint32', possible loss of data
+         libmng_chunk_io.c
+         libmng_chunk_prc.c
+         libmng_chunk_xs.c
+         libmng_cms.c
+         libmng_display.c
+         libmng_dither.c
+         libmng_error.c
+         libmng_filter.c
+         libmng_hlapi.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_hlapi.c(579): warning C4267: '=': conversion from 'size_t' to 'mng_uint32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_hlapi.c(582): warning C4267: '=': conversion from 'size_t' to 'mng_uint32', possible loss of data
+         libmng_jpeg.c
+         libmng_object_prc.c
+         Generating Code...
+         Compiling...
+         libmng_pixels.c
+         libmng_prop_xs.c
+         libmng_read.c
+         libmng_trace.c
+         libmng_write.c
+         libmng_zlib.c
+         bio.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\bio.c(129): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         cio.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.c(100): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.c(116): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         dwt.c
+         event.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\event.c(109): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+         image.c
+         j2k.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k.c(1485): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+         j2k_lib.c
+         jp2.c
+         jpt.c
+         mct.c
+         mqc.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mqc.c(359): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         openjpeg.c
+         pi.c
+         raw.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\raw.c(57): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         Generating Code...
+         Compiling...
+         t1.c
+         t2.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(294): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(383): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(412): warning C4244: '+=': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(414): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(417): warning C4244: '+=': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(419): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(422): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(511): warning C4244: '+=': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(514): warning C4244: '+=': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(587): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(621): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(644): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(679): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(709): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c(762): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
+         tcd.c
+         tgt.c
+         png.c
+         pngerror.c
+         pnggccrd.c
+         pngget.c
+         pngmem.c
+         pngpread.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c(594): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c(610): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c(782): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c(806): warning C4267: '-=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c(1396): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngread.c
+         pngrio.c
+         pngrtran.c
+         pngrutil.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(262): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(288): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(361): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(1089): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(1187): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(3209): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(3211): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(3213): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(3228): warning C4267: 'function': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(3229): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c(3232): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngset.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c(302): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c(319): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c(342): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c(608): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c(929): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngtrans.c
+         pngvcrd.c
+         pngwio.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwio.c(60): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         pngwrite.c
+         pngwtran.c
+         Generating Code...
+         Compiling...
+         pngwutil.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwutil.c(191): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwutil.c(1591): warning C4267: '=': conversion from 'size_t' to 'png_uint_32', possible loss of data
+         tif_aux.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_aux.c(41): warning C4267: 'initializing': conversion from 'size_t' to 'tsize_t', possible loss of data
+         tif_close.c
+         tif_codec.c
+         tif_color.c
+         tif_compress.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_compress.c(197): warning C4267: 'function': conversion from 'size_t' to 'tsize_t', possible loss of data
+         tif_dir.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.c(49): warning C4267: 'initializing': conversion from 'size_t' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.c(125): warning C4244: 'return': conversion from '__int64' to 'uint32', possible loss of data
+         tif_dirinfo.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirinfo.c(548): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirinfo.c(797): warning C4133: 'function': incompatible types - from 'size_t *' to 'unsigned int *'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirinfo.c(799): warning C4996: '_lfind': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _lfind. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\corecrt_search.h(71): note: see declaration of '_lfind'
+         tif_dirread.c
+         tif_dirwrite.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirwrite.c(179): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirwrite.c(486): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirwrite.c(1167): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+         tif_dumpmode.c
+         tif_error.c
+         tif_extension.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_extension.c(105): warning C4267: 'function': conversion from 'size_t' to 'tsize_t', possible loss of data
+         tif_fax3.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(260): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(263): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(313): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(316): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(395): warning C4311: 'type cast': pointer truncation from 'unsigned char *' to 'unsigned long'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(430): warning C4311: 'type cast': pointer truncation from 'unsigned char *' to 'unsigned long'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(806): warning C4311: 'type cast': pointer truncation from 'unsigned char *' to 'unsigned long'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(865): warning C4311: 'type cast': pointer truncation from 'unsigned char *' to 'unsigned long'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(940): warning C4311: 'type cast': pointer truncation from 'tidata_t' to 'unsigned long'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(1446): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(1449): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(1552): warning C4311: 'type cast': pointer truncation from 'unsigned char *' to 'unsigned long'
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(1561): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c(1564): warning C4244: '-=': conversion from '__int64' to 'tsize_t', possible loss of data
+         tif_fax3sm.c
+         tif_flush.c
+         tif_getimage.c
+         tif_jpeg.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_jpeg.c(481): warning C4267: '-=': conversion from 'size_t' to 'uint32', possible loss of data
+         tif_luv.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_luv.c(1167): warning C4267: 'initializing': conversion from 'size_t' to 'uint32', possible loss of data
+         tif_lzw.c
+         Generating Code...
+         Compiling...
+         tif_next.c
+         tif_ojpeg.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_ojpeg.c(651): warning C4244: '=': conversion from 'tsample_t' to 'uint8', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_ojpeg.c(1009): warning C4244: '=': conversion from 'uint16' to 'uint8', possible loss of data
+         tif_open.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_open.c(161): warning C4267: 'function': conversion from 'size_t' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_open.c(489): warning C4244: 'return': conversion from 'intptr_t' to 'int', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_open.c(498): warning C4244: 'initializing': conversion from 'intptr_t' to 'int', possible loss of data
+         tif_packbits.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c(101): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c(102): warning C4244: '+=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c(110): warning C4244: '+=': conversion from '__int64' to 'tsize_t', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c(186): warning C4244: '+=': conversion from '__int64' to 'tsize_t', possible loss of data
+         tif_pixarlog.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_pixarlog.c(636): warning C4267: 'initializing': conversion from 'size_t' to 'uint32', possible loss of data
+         tif_predict.c
+         tif_print.c
+         tif_read.c
+         tif_strip.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_strip.c(41): warning C4267: 'initializing': conversion from 'size_t' to 'uint32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_strip.c(54): warning C4267: 'initializing': conversion from 'size_t' to 'uint32', possible loss of data
+         tif_swab.c
+         tif_thunder.c
+         tif_tile.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_tile.c(41): warning C4267: 'initializing': conversion from 'size_t' to 'uint32', possible loss of data
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_tile.c(54): warning C4267: 'initializing': conversion from 'size_t' to 'uint32', possible loss of data
+         tif_version.c
+         tif_warning.c
+         tif_write.c
+     1>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_write.c(633): warning C4018: '>=': signed/unsigned mismatch
+         tif_zip.c
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         Generating Code...
+         Compiling...
+         gzio.c
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\Lib.exe /OUT:"H:\gpgpu\GPGPU\build\Dependencies\FreeImage\Debug\FreeImage.lib" /NOLOGO /MACHINE:X64  /machine:x64 FreeImage.dir\Debug\Deprecated.obj
+         FreeImage.dir\Debug\DeprecationMgr.obj
+         FreeImage.dir\Debug\BitmapAccess.obj
+         FreeImage.dir\Debug\CacheFile.obj
+         FreeImage.dir\Debug\ColorLookup.obj
+         FreeImage.dir\Debug\Conversion.obj
+         FreeImage.dir\Debug\Conversion16_555.obj
+         FreeImage.dir\Debug\Conversion16_565.obj
+         FreeImage.dir\Debug\Conversion24.obj
+         FreeImage.dir\Debug\Conversion32.obj
+         FreeImage.dir\Debug\Conversion4.obj
+         FreeImage.dir\Debug\Conversion8.obj
+         FreeImage.dir\Debug\ConversionRGBF.obj
+         FreeImage.dir\Debug\ConversionType.obj
+         FreeImage.dir\Debug\FreeImage.obj
+         FreeImage.dir\Debug\FreeImageIO.obj
+         FreeImage.dir\Debug\GetType.obj
+         FreeImage.dir\Debug\Halftoning.obj
+         FreeImage.dir\Debug\J2KHelper.obj
+         FreeImage.dir\Debug\MemoryIO.obj
+         FreeImage.dir\Debug\MultiPage.obj
+         FreeImage.dir\Debug\NNQuantizer.obj
+         FreeImage.dir\Debug\PSDParser.obj
+         FreeImage.dir\Debug\PixelAccess.obj
+         FreeImage.dir\Debug\Plugin.obj
+         FreeImage.dir\Debug\PluginBMP.obj
+         FreeImage.dir\Debug\PluginCUT.obj
+         FreeImage.dir\Debug\PluginDDS.obj
+         FreeImage.dir\Debug\PluginG3.obj
+         FreeImage.dir\Debug\PluginGIF.obj
+         FreeImage.dir\Debug\PluginHDR.obj
+         FreeImage.dir\Debug\PluginICO.obj
+         FreeImage.dir\Debug\PluginIFF.obj
+         FreeImage.dir\Debug\PluginJ2K.obj
+         FreeImage.dir\Debug\PluginJP2.obj
+         FreeImage.dir\Debug\PluginJPEG.obj
+         FreeImage.dir\Debug\PluginKOALA.obj
+         FreeImage.dir\Debug\PluginMNG.obj
+         FreeImage.dir\Debug\PluginPCD.obj
+         FreeImage.dir\Debug\PluginPCX.obj
+         FreeImage.dir\Debug\PluginPFM.obj
+         FreeImage.dir\Debug\PluginPICT.obj
+         FreeImage.dir\Debug\PluginPNG.obj
+         FreeImage.dir\Debug\PluginPNM.obj
+         FreeImage.dir\Debug\PluginPSD.obj
+         FreeImage.dir\Debug\PluginRAS.obj
+         FreeImage.dir\Debug\PluginSGI.obj
+         FreeImage.dir\Debug\PluginTARGA.obj
+         FreeImage.dir\Debug\PluginTIFF.obj
+         FreeImage.dir\Debug\PluginWBMP.obj
+         FreeImage.dir\Debug\PluginXBM.obj
+         FreeImage.dir\Debug\PluginXPM.obj
+         FreeImage.dir\Debug\TIFFLogLuv.obj
+         FreeImage.dir\Debug\ToneMapping.obj
+         FreeImage.dir\Debug\WuQuantizer.obj
+         FreeImage.dir\Debug\ZLibInterface.obj
+         FreeImage.dir\Debug\tmoColorConvert.obj
+         FreeImage.dir\Debug\tmoDrago03.obj
+         FreeImage.dir\Debug\tmoFattal02.obj
+         FreeImage.dir\Debug\tmoReinhard05.obj
+         FreeImage.dir\Debug\BSplineRotate.obj
+         FreeImage.dir\Debug\Background.obj
+         FreeImage.dir\Debug\Channels.obj
+         FreeImage.dir\Debug\ClassicRotate.obj
+         FreeImage.dir\Debug\Colors.obj
+         FreeImage.dir\Debug\CopyPaste.obj
+         FreeImage.dir\Debug\Display.obj
+         FreeImage.dir\Debug\Flip.obj
+         FreeImage.dir\Debug\JPEGTransform.obj
+         FreeImage.dir\Debug\MultigridPoissonSolver.obj
+         FreeImage.dir\Debug\Rescale.obj
+         FreeImage.dir\Debug\Resize.obj
+         FreeImage.dir\Debug\jaricom.obj
+         FreeImage.dir\Debug\jcapimin.obj
+         FreeImage.dir\Debug\jcapistd.obj
+         FreeImage.dir\Debug\jcarith.obj
+         FreeImage.dir\Debug\jccoefct.obj
+         FreeImage.dir\Debug\jccolor.obj
+         FreeImage.dir\Debug\jcdctmgr.obj
+         FreeImage.dir\Debug\jchuff.obj
+         FreeImage.dir\Debug\jcinit.obj
+         FreeImage.dir\Debug\jcmainct.obj
+         FreeImage.dir\Debug\jcmarker.obj
+         FreeImage.dir\Debug\jcmaster.obj
+         FreeImage.dir\Debug\jcomapi.obj
+         FreeImage.dir\Debug\jcparam.obj
+         FreeImage.dir\Debug\jcprepct.obj
+         FreeImage.dir\Debug\jcsample.obj
+         FreeImage.dir\Debug\jctrans.obj
+         FreeImage.dir\Debug\jdapimin.obj
+         FreeImage.dir\Debug\jdapistd.obj
+         FreeImage.dir\Debug\jdarith.obj
+         FreeImage.dir\Debug\jdatadst.obj
+         FreeImage.dir\Debug\jdatasrc.obj
+         FreeImage.dir\Debug\jdcoefct.obj
+         FreeImage.dir\Debug\jdcolor.obj
+         FreeImage.dir\Debug\jddctmgr.obj
+         FreeImage.dir\Debug\jdhuff.obj
+         FreeImage.dir\Debug\jdinput.obj
+         FreeImage.dir\Debug\jdmainct.obj
+         FreeImage.dir\Debug\jdmarker.obj
+         FreeImage.dir\Debug\jdmaster.obj
+         FreeImage.dir\Debug\jdmerge.obj
+         FreeImage.dir\Debug\jdpostct.obj
+         FreeImage.dir\Debug\jdsample.obj
+         FreeImage.dir\Debug\jdtrans.obj
+         FreeImage.dir\Debug\jerror.obj
+         FreeImage.dir\Debug\jfdctflt.obj
+         FreeImage.dir\Debug\jfdctfst.obj
+         FreeImage.dir\Debug\jfdctint.obj
+         FreeImage.dir\Debug\jidctflt.obj
+         FreeImage.dir\Debug\jidctfst.obj
+         FreeImage.dir\Debug\jidctint.obj
+         FreeImage.dir\Debug\jmemmgr.obj
+         FreeImage.dir\Debug\jmemnobs.obj
+         FreeImage.dir\Debug\jquant1.obj
+         FreeImage.dir\Debug\jquant2.obj
+         FreeImage.dir\Debug\jutils.obj
+         FreeImage.dir\Debug\transupp.obj
+         FreeImage.dir\Debug\libmng_callback_xs.obj
+         FreeImage.dir\Debug\libmng_chunk_descr.obj
+         FreeImage.dir\Debug\libmng_chunk_io.obj
+         FreeImage.dir\Debug\libmng_chunk_prc.obj
+         FreeImage.dir\Debug\libmng_chunk_xs.obj
+         FreeImage.dir\Debug\libmng_cms.obj
+         FreeImage.dir\Debug\libmng_display.obj
+         FreeImage.dir\Debug\libmng_dither.obj
+         FreeImage.dir\Debug\libmng_error.obj
+         FreeImage.dir\Debug\libmng_filter.obj
+         FreeImage.dir\Debug\libmng_hlapi.obj
+         FreeImage.dir\Debug\libmng_jpeg.obj
+         FreeImage.dir\Debug\libmng_object_prc.obj
+         FreeImage.dir\Debug\libmng_pixels.obj
+         FreeImage.dir\Debug\libmng_prop_xs.obj
+         FreeImage.dir\Debug\libmng_read.obj
+         FreeImage.dir\Debug\libmng_trace.obj
+         FreeImage.dir\Debug\libmng_write.obj
+         FreeImage.dir\Debug\libmng_zlib.obj
+         FreeImage.dir\Debug\bio.obj
+         FreeImage.dir\Debug\cio.obj
+         FreeImage.dir\Debug\dwt.obj
+         FreeImage.dir\Debug\event.obj
+         FreeImage.dir\Debug\image.obj
+         FreeImage.dir\Debug\j2k.obj
+         FreeImage.dir\Debug\j2k_lib.obj
+         FreeImage.dir\Debug\jp2.obj
+         FreeImage.dir\Debug\jpt.obj
+         FreeImage.dir\Debug\mct.obj
+         FreeImage.dir\Debug\mqc.obj
+         FreeImage.dir\Debug\openjpeg.obj
+         FreeImage.dir\Debug\pi.obj
+         FreeImage.dir\Debug\raw.obj
+         FreeImage.dir\Debug\t1.obj
+         FreeImage.dir\Debug\t2.obj
+         FreeImage.dir\Debug\tcd.obj
+         FreeImage.dir\Debug\tgt.obj
+         FreeImage.dir\Debug\png.obj
+         FreeImage.dir\Debug\pngerror.obj
+         FreeImage.dir\Debug\pnggccrd.obj
+         FreeImage.dir\Debug\pngget.obj
+         FreeImage.dir\Debug\pngmem.obj
+         FreeImage.dir\Debug\pngpread.obj
+         FreeImage.dir\Debug\pngread.obj
+         FreeImage.dir\Debug\pngrio.obj
+         FreeImage.dir\Debug\pngrtran.obj
+         FreeImage.dir\Debug\pngrutil.obj
+         FreeImage.dir\Debug\pngset.obj
+         FreeImage.dir\Debug\pngtrans.obj
+         FreeImage.dir\Debug\pngvcrd.obj
+         FreeImage.dir\Debug\pngwio.obj
+         FreeImage.dir\Debug\pngwrite.obj
+         FreeImage.dir\Debug\pngwtran.obj
+         FreeImage.dir\Debug\pngwutil.obj
+         FreeImage.dir\Debug\tif_aux.obj
+         FreeImage.dir\Debug\tif_close.obj
+         FreeImage.dir\Debug\tif_codec.obj
+         FreeImage.dir\Debug\tif_color.obj
+         FreeImage.dir\Debug\tif_compress.obj
+         FreeImage.dir\Debug\tif_dir.obj
+         FreeImage.dir\Debug\tif_dirinfo.obj
+         FreeImage.dir\Debug\tif_dirread.obj
+         FreeImage.dir\Debug\tif_dirwrite.obj
+         FreeImage.dir\Debug\tif_dumpmode.obj
+         FreeImage.dir\Debug\tif_error.obj
+         FreeImage.dir\Debug\tif_extension.obj
+         FreeImage.dir\Debug\tif_fax3.obj
+         FreeImage.dir\Debug\tif_fax3sm.obj
+         FreeImage.dir\Debug\tif_flush.obj
+         FreeImage.dir\Debug\tif_getimage.obj
+         FreeImage.dir\Debug\tif_jpeg.obj
+         FreeImage.dir\Debug\tif_luv.obj
+         FreeImage.dir\Debug\tif_lzw.obj
+         FreeImage.dir\Debug\tif_next.obj
+         FreeImage.dir\Debug\tif_ojpeg.obj
+         FreeImage.dir\Debug\tif_open.obj
+         FreeImage.dir\Debug\tif_packbits.obj
+         FreeImage.dir\Debug\tif_pixarlog.obj
+         FreeImage.dir\Debug\tif_predict.obj
+         FreeImage.dir\Debug\tif_print.obj
+         FreeImage.dir\Debug\tif_read.obj
+         FreeImage.dir\Debug\tif_strip.obj
+         FreeImage.dir\Debug\tif_swab.obj
+         FreeImage.dir\Debug\tif_thunder.obj
+         FreeImage.dir\Debug\tif_tile.obj
+         FreeImage.dir\Debug\tif_version.obj
+         FreeImage.dir\Debug\tif_warning.obj
+         FreeImage.dir\Debug\tif_write.obj
+         FreeImage.dir\Debug\tif_zip.obj
+         FreeImage.dir\Debug\Exif.obj
+         FreeImage.dir\Debug\FIRational.obj
+         FreeImage.dir\Debug\FreeImageTag.obj
+         FreeImage.dir\Debug\IPTC.obj
+         FreeImage.dir\Debug\TagConversion.obj
+         FreeImage.dir\Debug\TagLib.obj
+         FreeImage.dir\Debug\XTIFF.obj
+         FreeImage.dir\Debug\adler32.obj
+         FreeImage.dir\Debug\compress.obj
+         FreeImage.dir\Debug\crc32.obj
+         FreeImage.dir\Debug\deflate.obj
+         FreeImage.dir\Debug\gzio.obj
+         FreeImage.dir\Debug\infback.obj
+         FreeImage.dir\Debug\inffast.obj
+         FreeImage.dir\Debug\inflate.obj
+         FreeImage.dir\Debug\inftrees.obj
+         FreeImage.dir\Debug\trees.obj
+         FreeImage.dir\Debug\uncompr.obj
+         FreeImage.dir\Debug\zutil.obj
+         FreeImage.vcxproj -> H:\gpgpu\GPGPU\build\Dependencies\FreeImage\Debug\FreeImage.lib
+     1>Done Building Project "H:\gpgpu\GPGPU\build\Dependencies\FreeImage\FreeImage.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:07.45

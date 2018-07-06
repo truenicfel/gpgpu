@@ -1,0 +1,73 @@
+﻿Build started 02.07.2018 14:01:30.
+     1>Project "H:\gpgpu\GPGPU\build\Dependencies\freeglut\freeglut.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule H:/gpgpu/GPGPU/Dependencies/freeglut/CMakeLists.txt
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/freeglut/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\freeglut\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D FREEGLUT_STATIC /D _CRT_SECURE_NO_WARNINGS /D FREEGLUT_LIB_PRAGMAS=0 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"freeglut.dir\Debug\\" /Fd"freeglut.dir\Debug\freeglut.pdb" /Gd /TC /errorReport:prompt H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_callbacks.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_cursor.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_display.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_ext.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_font_data.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_font.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_gamemode.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_geometry.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_glutfont_definitions.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_init.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_input_devices.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_joystick.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_main.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_menu.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_misc.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_overlay.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_spaceball.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_state.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_stroke_mono_roman.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_stroke_roman.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_structure.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_teapot.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_videoresize.c H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_window.c
+         freeglut_callbacks.c
+         freeglut_cursor.c
+         freeglut_display.c
+         freeglut_ext.c
+         freeglut_font_data.c
+         freeglut_font.c
+         freeglut_gamemode.c
+         freeglut_geometry.c
+         freeglut_glutfont_definitions.c
+         freeglut_init.c
+         freeglut_input_devices.c
+         freeglut_joystick.c
+         freeglut_main.c
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_main.c(84): warning C4312: 'type cast': conversion from 'unsigned int' to 'pGetTouchInputInfo' of greater size
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_main.c(85): warning C4312: 'type cast': conversion from 'unsigned int' to 'pCloseTouchInputHandle' of greater size
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_main.c(2555): warning C4312: 'type cast': conversion from 'unsigned int' to 'pGetTouchInputInfo' of greater size
+         freeglut_menu.c
+         freeglut_misc.c
+         freeglut_overlay.c
+         freeglut_spaceball.c
+         freeglut_state.c
+         freeglut_stroke_mono_roman.c
+         freeglut_stroke_roman.c
+         Generating Code...
+         Compiling...
+         freeglut_structure.c
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_structure.c(539): warning C4311: 'type cast': pointer truncation from 'void *' to 'int'
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_structure.c(558): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+         freeglut_teapot.c
+         freeglut_videoresize.c
+         freeglut_window.c
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_window.c(146): warning C4312: 'type cast': conversion from 'unsigned int' to 'pRegisterTouchWindow' of greater size
+         fgSetupPixelFormat(): there is still some work to do here!
+     1>H:\gpgpu\GPGPU\Dependencies\freeglut\src\freeglut_window.c(1451): warning C4312: 'type cast': conversion from 'unsigned int' to 'pRegisterTouchWindow' of greater size
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\Lib.exe /OUT:"H:\gpgpu\GPGPU\build\Dependencies\freeglut\Debug\freeglut.lib" /NOLOGO /MACHINE:X64  /machine:x64 freeglut.dir\Debug\freeglut_callbacks.obj
+         freeglut.dir\Debug\freeglut_cursor.obj
+         freeglut.dir\Debug\freeglut_display.obj
+         freeglut.dir\Debug\freeglut_ext.obj
+         freeglut.dir\Debug\freeglut_font_data.obj
+         freeglut.dir\Debug\freeglut_font.obj
+         freeglut.dir\Debug\freeglut_gamemode.obj
+         freeglut.dir\Debug\freeglut_geometry.obj
+         freeglut.dir\Debug\freeglut_glutfont_definitions.obj
+         freeglut.dir\Debug\freeglut_init.obj
+         freeglut.dir\Debug\freeglut_input_devices.obj
+         freeglut.dir\Debug\freeglut_joystick.obj
+         freeglut.dir\Debug\freeglut_main.obj
+         freeglut.dir\Debug\freeglut_menu.obj
+         freeglut.dir\Debug\freeglut_misc.obj
+         freeglut.dir\Debug\freeglut_overlay.obj
+         freeglut.dir\Debug\freeglut_spaceball.obj
+         freeglut.dir\Debug\freeglut_state.obj
+         freeglut.dir\Debug\freeglut_stroke_mono_roman.obj
+         freeglut.dir\Debug\freeglut_stroke_roman.obj
+         freeglut.dir\Debug\freeglut_structure.obj
+         freeglut.dir\Debug\freeglut_teapot.obj
+         freeglut.dir\Debug\freeglut_videoresize.obj
+         freeglut.dir\Debug\freeglut_window.obj
+         freeglut.vcxproj -> H:\gpgpu\GPGPU\build\Dependencies\freeglut\Debug\freeglut.lib
+     1>Done Building Project "H:\gpgpu\GPGPU\build\Dependencies\freeglut\freeglut.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.96

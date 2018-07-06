@@ -1,0 +1,18 @@
+﻿Build started 02.07.2018 14:01:28.
+     1>Project "H:\gpgpu\GPGPU\build\ZERO_CHECK.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/freeglut/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/glew/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/AntTweakBar/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/FreeImage/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/GLTools/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/ImageLoader/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/A10_CUDA_OpenCL_InterOp/CMakeFiles/generate.stamp is up-to-date.
+     1>Done Building Project "H:\gpgpu\GPGPU\build\ZERO_CHECK.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.66

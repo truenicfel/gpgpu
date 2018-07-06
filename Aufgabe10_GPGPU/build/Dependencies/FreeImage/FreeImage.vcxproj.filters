@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\Deprecated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\BitmapAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\CacheFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ColorLookup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion16_555.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion16_565.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion24.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion8.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ConversionRGBF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ConversionType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\FreeImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\FreeImageIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\GetType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Halftoning.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\J2KHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\MemoryIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\MultiPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\NNQuantizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PixelAccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginBMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginCUT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginDDS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginG3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginGIF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginHDR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginICO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginIFF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJ2K.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJP2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJPEG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginKOALA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginMNG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPCX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPFM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPICT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPNG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPNM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPSD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginRAS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginSGI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginTARGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginTIFF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginWBMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginXBM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginXPM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\TIFFLogLuv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ToneMapping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\WuQuantizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ZLibInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoColorConvert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoDrago03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoFattal02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoReinhard05.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\BSplineRotate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Background.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Channels.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\ClassicRotate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Colors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\CopyPaste.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Flip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\JPEGTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\MultigridPoissonSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Rescale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Resize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jaricom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jccoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jccolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcdctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jchuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcomapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcparam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcprepct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jctrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdatadst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdatasrc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdcoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdcolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jddctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdhuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdinput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmerge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdpostct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemnobs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jquant1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jquant2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\transupp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_callback_xs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_io.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_prc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_xs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_cms.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_display.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_dither.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_hlapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_jpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_object_prc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_pixels.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_prop_xs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_trace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_zlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\bio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\dwt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\image.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jp2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jpt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mqc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\openjpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\pi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\raw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tcd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tgt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\png.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pnggccrd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngget.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngmem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrtran.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngvcrd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwtran.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_aux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_close.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_codec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_color.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dumpmode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_extension.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3sm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_flush.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_getimage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_jpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_luv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_lzw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_next.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_ojpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_pixarlog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_predict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_strip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_swab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_thunder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_tile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_warning.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\Exif.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FIRational.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FreeImageTag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\IPTC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\TagConversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\TagLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\XTIFF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\adler32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\crc32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\deflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\gzio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\infback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inftrees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\trees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\uncompr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\CacheFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Filters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Resize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jerror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jinclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemsys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmorecfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jpegint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jpeglib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\transupp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_prc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_cms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_conf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_dither.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_jpeg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_object_prc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_pixels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_read.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_zlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\bio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\dwt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\fix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\int.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k_lib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jp2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jpt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mqc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\openjpeg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\opj_includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\opj_malloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\pi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\raw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1_luts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tcd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tgt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\png.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\t4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_predict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiffio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiffiop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiffvers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\uvcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FIRational.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FreeImageTag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Quantizers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ToneMapping.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\crc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\deflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffixed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inftrees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\trees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zconf.in.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{43AFAC9F-579C-3B0D-95ED-1C22C77432F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{758FDCBF-27C6-396C-A7EA-3F232160E8FB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

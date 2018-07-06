@@ -1,0 +1,54 @@
+﻿Build started 02.07.2018 14:01:36.
+     1>Project "H:\gpgpu\GPGPU\build\Dependencies\AntTweakBar\AntTweakBar.vcxproj" on node 4 (Build target(s)).
+     1>CustomBuild:
+         Building Custom Rule H:/gpgpu/GPGPU/Dependencies/AntTweakBar/CMakeLists.txt
+         CMake does not need to re-run because H:/gpgpu/GPGPU/build/Dependencies/AntTweakBar/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\AntTweakBar\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D TW_STATIC /D TW_NO_LIB_PRAGMA /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"AntTweakBar.dir\Debug\\" /Fd"AntTweakBar.dir\Debug\AntTweakBar.pdb" /Gd /TP /errorReport:prompt H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwPrecomp.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwFonts.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwColors.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwBar.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwOpenGL.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\LoadOGL.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwOpenGLCore.cpp H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\LoadOGLCore.cpp
+         TwPrecomp.cpp
+         TwMgr.cpp
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6225): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6226): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6227): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6228): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6229): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6230): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6231): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6232): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6233): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6234): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6235): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6236): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6237): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6239): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6252): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6258): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+     1>H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp(6267): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+         TwFonts.cpp
+         TwColors.cpp
+         TwBar.cpp
+         TwOpenGL.cpp
+         LoadOGL.cpp
+         TwOpenGLCore.cpp
+         LoadOGLCore.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IH:\gpgpu\GPGPU\Dependencies\AntTweakBar\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include" /Zi /nologo /W3 /WX- /Od /Ob0 /D WIN32 /D _WINDOWS /D TW_STATIC /D TW_NO_LIB_PRAGMA /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"AntTweakBar.dir\Debug\\" /Fd"AntTweakBar.dir\Debug\AntTweakBar.pdb" /Gd /TC /errorReport:prompt H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwEventGLUT.c
+         TwEventGLUT.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\Lib.exe /OUT:"H:\gpgpu\GPGPU\build\Dependencies\AntTweakBar\Debug\AntTweakBar.lib" /NOLOGO /MACHINE:X64  /machine:x64 AntTweakBar.dir\Debug\TwPrecomp.obj
+         AntTweakBar.dir\Debug\TwMgr.obj
+         AntTweakBar.dir\Debug\TwFonts.obj
+         AntTweakBar.dir\Debug\TwColors.obj
+         AntTweakBar.dir\Debug\TwBar.obj
+         AntTweakBar.dir\Debug\TwOpenGL.obj
+         AntTweakBar.dir\Debug\LoadOGL.obj
+         AntTweakBar.dir\Debug\TwOpenGLCore.obj
+         AntTweakBar.dir\Debug\LoadOGLCore.obj
+         AntTweakBar.dir\Debug\TwEventGLUT.obj
+     1>TwPrecomp.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+         AntTweakBar.vcxproj -> H:\gpgpu\GPGPU\build\Dependencies\AntTweakBar\Debug\AntTweakBar.lib
+     1>Done Building Project "H:\gpgpu\GPGPU\build\Dependencies\AntTweakBar\AntTweakBar.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.06

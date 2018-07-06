@@ -1,0 +1,13 @@
+# CMake generation dependency list for this directory.
+H:/gpgpu/GPGPU/A10_CUDA_OpenCL_InterOp/CMakeLists.txt
+H:/gpgpu/GPGPU/build/CMakeFiles/3.9.0-rc6/CMakeCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCommonLanguageInclude.cmake
+H:/gpgpu/GPGPU/cmake/launcher-templates/vcxproj.user.in
+H:/gpgpu/GPGPU/cmake/launcher-templates/targetlauncher.cmd.in
+H:/gpgpu/GPGPU/cmake/launcher-templates/targetlauncher.cmd.in
+H:/gpgpu/GPGPU/cmake/launcher-templates/targetlauncher.cmd.in
+H:/gpgpu/GPGPU/cmake/launcher-templates/targetlauncher.cmd.in

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLBatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\GLTools\src\GLTriangleBatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\GLTools\src\math3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLBatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLBatchBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLFrustum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLGeometryTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLMatrixStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLShaderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLTools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\GLTriangleBatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\StopWatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\GLTools\include\math3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\gpgpu\GPGPU\Dependencies\GLTools\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{43AFAC9F-579C-3B0D-95ED-1C22C77432F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{758FDCBF-27C6-396C-A7EA-3F232160E8FB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

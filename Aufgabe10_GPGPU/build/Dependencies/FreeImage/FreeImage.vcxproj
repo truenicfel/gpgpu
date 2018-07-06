@@ -1,0 +1,1384 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DF8021ED-EDD4-3907-802B-6FEE7FE6E7BB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>FreeImage</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FreeImage.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">FreeImage</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FreeImage.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">FreeImage</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FreeImage.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">FreeImage</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FreeImage.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">FreeImage</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Defines>_WINDOWS;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="Debug";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob0"</AdditionalOptions>
+      <Include>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(Include)</Include>
+      <Optimization>Od</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>RTC1</RuntimeChecks>
+      <TypeInfo>true</TypeInfo>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="Release";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob2"</AdditionalOptions>
+      <Include>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(Include)</Include>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TypeInfo>true</TypeInfo>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="MinSizeRel";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Ob1"</AdditionalOptions>
+      <Include>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(Include)</Include>
+      <Optimization>O1</Optimization>
+      <Runtime>MD</Runtime>
+      <TypeInfo>true</TypeInfo>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <CudaCompile>
+      <Defines>_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;OPJ_STATIC;FREEIMAGE_LIB;NO_LCMS;CMAKE_INTDIR="RelWithDebInfo";%(Defines)</Defines>
+      <AdditionalOptions>%(AdditionalOptions) -Xcompiler="/EHsc -Zi -Ob1"</AdditionalOptions>
+      <Include>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(Include)</Include>
+      <Optimization>O2</Optimization>
+      <Runtime>MD</Runtime>
+      <TypeInfo>true</TypeInfo>
+      <Warning>W3</Warning>
+    </CudaCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>H:\gpgpu\GPGPU\Dependencies\FreeImage\Source;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Half;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Iex;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmImf;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\IlmThread;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\OpenEXR\Imath;H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <CudaLink>
+      <AdditionalOptions>-Wno-deprecated-gpu-targets</AdditionalOptions>
+      <PerformDeviceLink>false</PerformDeviceLink>
+    </CudaLink>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HH:/gpgpu/GPGPU -BH:/gpgpu/GPGPU/build --check-stamp-file H:/gpgpu/GPGPU/build/Dependencies/FreeImage/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HH:/gpgpu/GPGPU -BH:/gpgpu/GPGPU/build --check-stamp-file H:/gpgpu/GPGPU/build/Dependencies/FreeImage/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HH:/gpgpu/GPGPU -BH:/gpgpu/GPGPU/build --check-stamp-file H:/gpgpu/GPGPU/build/Dependencies/FreeImage/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HH:/gpgpu/GPGPU -BH:/gpgpu/GPGPU/build --check-stamp-file H:/gpgpu/GPGPU/build/Dependencies/FreeImage/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:/gpgpu/GPGPU/Dependencies/FreeImage/CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;H:\gpgpu\GPGPU\Dependencies\FreeImage\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\gpgpu\GPGPU\build\Dependencies\FreeImage\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\CacheFile.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\Deprecated.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\DeprecationManager\DeprecationMgr.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\BitmapAccess.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\CacheFile.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ColorLookup.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion16_555.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion16_565.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion24.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion32.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion4.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Conversion8.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ConversionRGBF.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ConversionType.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\FreeImage.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\FreeImageIO.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\GetType.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Halftoning.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\J2KHelper.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\MemoryIO.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\MultiPage.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\NNQuantizer.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PSDParser.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PixelAccess.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\Plugin.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginBMP.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginCUT.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginDDS.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginG3.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginGIF.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginHDR.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginICO.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginIFF.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJ2K.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJP2.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginJPEG.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginKOALA.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginMNG.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPCD.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPCX.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPFM.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPICT.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPNG.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPNM.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginPSD.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginRAS.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginSGI.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginTARGA.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginTIFF.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginWBMP.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginXBM.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\PluginXPM.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\TIFFLogLuv.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ToneMapping.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\WuQuantizer.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\ZLibInterface.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoColorConvert.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoDrago03.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoFattal02.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImage\tmoReinhard05.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageIO.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\BSplineRotate.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Background.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Channels.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\ClassicRotate.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Colors.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\CopyPaste.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Display.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Filters.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Flip.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\JPEGTransform.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\MultigridPoissonSolver.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Rescale.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Resize.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\FreeImageToolkit\Resize.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jaricom.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcapimin.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcapistd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcarith.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jccoefct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jccolor.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcdctmgr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jchuff.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcinit.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmainct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmarker.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcmaster.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcomapi.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jconfig.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcparam.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcprepct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jcsample.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jctrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdapimin.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdapistd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdarith.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdatadst.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdatasrc.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdcoefct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdcolor.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdct.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jddctmgr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdhuff.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdinput.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmainct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmarker.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmaster.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdmerge.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdpostct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdsample.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jdtrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jerror.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jerror.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctflt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctfst.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jfdctint.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctflt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctfst.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jidctint.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jinclude.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemmgr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemnobs.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmemsys.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jmorecfg.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jpegint.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jpeglib.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jquant1.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jquant2.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jutils.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\jversion.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\transupp.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibJPEG\transupp.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_callback_xs.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_descr.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_io.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_io.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_prc.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_prc.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunk_xs.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_chunks.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_cms.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_cms.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_conf.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_data.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_display.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_display.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_dither.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_dither.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_error.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_error.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_filter.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_filter.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_hlapi.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_jpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_jpeg.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_memory.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_object_prc.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_object_prc.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_objects.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_pixels.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_pixels.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_prop_xs.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_read.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_read.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_trace.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_trace.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_types.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_write.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_write.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_zlib.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibMNG\libmng_zlib.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\bio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\bio.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\cio.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\dwt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\dwt.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\event.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\event.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\fix.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\image.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\image.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\int.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k_lib.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\j2k_lib.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jp2.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jp2.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jpt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\jpt.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mct.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mct.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mqc.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\mqc.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\openjpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\openjpeg.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\opj_includes.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\opj_malloc.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\pi.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\pi.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\raw.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\raw.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t1_luts.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\t2.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tcd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tcd.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tgt.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibOpenJPEG\tgt.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\png.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\png.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngconf.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngerror.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pnggccrd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngget.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngmem.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngpread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrtran.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngrutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngset.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngtrans.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngvcrd.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwtran.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibPNG\pngwutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\t4.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_aux.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_close.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_codec.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_color.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_compress.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_config.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dir.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirinfo.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirread.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dirwrite.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_dumpmode.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_error.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_extension.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_fax3sm.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_flush.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_getimage.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_jpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_luv.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_lzw.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_next.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_ojpeg.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_open.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_packbits.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_pixarlog.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_predict.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_predict.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_print.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_read.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_strip.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_swab.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_thunder.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_tile.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_version.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_warning.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_write.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tif_zip.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiff.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiffio.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiffiop.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\tiffvers.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\LibTIFF\uvcode.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\Exif.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FIRational.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FIRational.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FreeImageTag.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\FreeImageTag.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\IPTC.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\TagConversion.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\TagLib.cpp"  />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Metadata\XTIFF.cpp"  />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Plugin.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Quantizers.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ToneMapping.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\Utilities.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\adler32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\compress.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\crc32.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\crc32.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\deflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\deflate.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\gzio.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\infback.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffast.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffast.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inffixed.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inflate.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inflate.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inftrees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\inftrees.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\trees.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\trees.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\uncompr.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zconf.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zconf.in.h" />
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zlib.h" />
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zutil.c" >
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\FreeImage\Source\ZLib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="H:\gpgpu\GPGPU\build\ZERO_CHECK.vcxproj">
+      <Project>{A5537C12-10A7-376F-86DD-CC2D333CED80}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.1.targets" />
+  </ImportGroup>
+</Project>

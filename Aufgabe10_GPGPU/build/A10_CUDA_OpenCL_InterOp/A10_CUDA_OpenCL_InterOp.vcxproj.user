@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerEnvironment>PATH=H:\OpenCVReadVideo (1)\OpenCVReadVideo\OpenCV\vc14\bin;%PATH%;
+$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>H:\gpgpu\GPGPU\build\A10_CUDA_OpenCL_InterOp\Debug\A10_CUDA_OpenCL_InterOp.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>
+    </LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>H:/gpgpu/GPGPU/A10_CUDA_OpenCL_InterOp</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerEnvironment>PATH=;%PATH%
+PATH=;%PATH%</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>H:\gpgpu\GPGPU\build\A10_CUDA_OpenCL_InterOp\Release\A10_CUDA_OpenCL_InterOp.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>
+    </LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>H:/gpgpu/GPGPU/A10_CUDA_OpenCL_InterOp</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <LocalDebuggerEnvironment>PATH=;%PATH%
+PATH=;%PATH%</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>H:\gpgpu\GPGPU\build\A10_CUDA_OpenCL_InterOp\MinSizeRel\A10_CUDA_OpenCL_InterOp.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>
+    </LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>H:/gpgpu/GPGPU/A10_CUDA_OpenCL_InterOp</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <LocalDebuggerEnvironment>PATH=;%PATH%
+PATH=;%PATH%</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>H:\gpgpu\GPGPU\build\A10_CUDA_OpenCL_InterOp\RelWithDebInfo\A10_CUDA_OpenCL_InterOp.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>
+    </LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>H:/gpgpu/GPGPU/A10_CUDA_OpenCL_InterOp</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwPrecomp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwFonts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwColors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwOpenGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\LoadOGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwOpenGLCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\LoadOGLCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwEventGLUT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwPrecomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwFonts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwColors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwOpenGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\TwOpenGLCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\src\MiniGLUT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="H:\gpgpu\GPGPU\Dependencies\AntTweakBar\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{43AFAC9F-579C-3B0D-95ED-1C22C77432F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{758FDCBF-27C6-396C-A7EA-3F232160E8FB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
